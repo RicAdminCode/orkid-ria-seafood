@@ -1,0 +1,60 @@
+[
+  {
+    "url": "https://orkidriaseafood.com/",
+    "title": "Orkid Ria Seafood Restaurant Langkawi | Fresh Seafood",
+    "description": "Orkid Ria Seafood Restaurant in Langkawi. Explore dining highlights and call to arrange your visit.",
+    "canonical": "",
+    "h1": 1,
+    "images": 16,
+    "dimensions": 0,
+    "schemaTypes": [
+      "SeafoodRestaurant",
+      "PostalAddress"
+    ],
+    "htmlBytes": 6856
+  },
+  {
+    "url": "https://orkidriaseafood.com/menu/",
+    "title": "Seafood Menu | Orkid Ria Langkawi",
+    "description": "Orkid Ria Seafood Restaurant in Langkawi. Explore dining highlights and call to arrange your visit.",
+    "canonical": "",
+    "h1": 1,
+    "images": 1,
+    "dimensions": 0,
+    "schemaTypes": [],
+    "htmlBytes": 3327
+  },
+  {
+    "url": "https://orkidriaseafood.com/about/",
+    "title": "Our Story | Orkid Ria Seafood Restaurant Langkawi",
+    "description": "Orkid Ria Seafood Restaurant in Langkawi. Explore dining highlights and call to arrange your visit.",
+    "canonical": "",
+    "h1": 1,
+    "images": 2,
+    "dimensions": 0,
+    "schemaTypes": [],
+    "htmlBytes": 3185
+  },
+  {
+    "url": "https://orkidriaseafood.com/restaurant/",
+    "title": "Visit Orkid Ria Seafood Restaurant | Langkawi",
+    "description": "Orkid Ria Seafood Restaurant in Langkawi. Explore dining highlights and call to arrange your visit.",
+    "canonical": "",
+    "h1": 1,
+    "images": 26,
+    "dimensions": 25,
+    "schemaTypes": [],
+    "htmlBytes": 14705
+  },
+  {
+    "url": "https://orkidriaseafood.com/reservation/",
+    "title": "Reserve a Table | Orkid Ria Seafood Restaurant Langkawi",
+    "description": "Orkid Ria Seafood Restaurant in Langkawi. Explore dining highlights and call to arrange your visit.",
+    "canonical": "",
+    "h1": 1,
+    "images": 1,
+    "dimensions": 0,
+    "schemaTypes": [],
+    "htmlBytes": 2817
+  }
+]

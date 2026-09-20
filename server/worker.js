@@ -144,8 +144,28 @@ async function administration(request,env,transport){
  return adminPage(content);
 }
 
+// Only known public documents are normalised. OAuth, API cursors and asset
+// version queries must retain their parameters, and unknown URLs remain 404s.
+const canonicalOrigin='https://orkidriaseafood.com';
+const publicPages=new Map([
+ ['/', '/'], ['/index.html', '/'],
+ ...['menu','about','restaurant','reservation'].flatMap(page=>[
+  [`/${page}`, `/${page}/`], [`/${page}/`, `/${page}/`], [`/${page}/index.html`, `/${page}/`]
+ ])
+]);
+const productionHosts=new Set(['orkidriaseafood.com','www.orkidriaseafood.com','orkid-ria-seafood.steep-mud-60fb.workers.dev']);
+function canonicalRedirect(request,env){
+ const url=new URL(request.url),path=publicPages.get(url.pathname);
+ if(env.SITE_ORIGIN!==canonicalOrigin||!productionHosts.has(url.hostname)||!path||!['GET','HEAD'].includes(request.method))return null;
+ const target=canonicalOrigin+path;
+ if(url.href===target)return null;
+ return new Response(null,{status:301,headers:{Location:target,'Cache-Control':'public, max-age=3600'}});
+}
+
 export function createWorker(transport=fetch){return {
  async fetch(request,env){
+  const canonical=canonicalRedirect(request,env);
+  if(canonical)return canonical;
   const path=new URL(request.url).pathname;
   if(!path.startsWith('/api/')&&!path.startsWith('/admin/'))return env.ASSETS.fetch(request);
   try{
