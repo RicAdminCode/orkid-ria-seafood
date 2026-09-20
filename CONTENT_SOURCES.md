@@ -63,3 +63,13 @@
 }
 
 Photos are attached to 2026 reviews. Original capture dates and third-party reuse permission are not independently verified.
+
+## Gallery research — 20 September 2026
+
+Added 14 photos from the Tripadvisor review page linked above: one associated with Oana M's January 2026 review, six with Rene R's February 3, 2026 review, and seven with Светлана Л's January 20, 2026 review. Source image URLs, contributors, and review dates are recorded in `assets/gallery/sources.json`. Oana's publication date varies between January 5 and 6 across localized snapshots.
+
+The Visit gallery includes these 14 images and the six existing images. The cutoff applies to associated review publication dates, not independently verified capture dates. Search results and accessible review pages are not an exhaustive internet crawl; old and undated material was excluded. Rights status remains as documented above.
+
+## User-requested Langkawi App photographs
+
+Five photographs from https://langkawi.app/business/orkid-ria-seafood-restaurant were added to the homepage slideshow and Visit gallery at the user’s request. Original URLs are recorded in `assets/langkawi-app/sources.json`. Publication and capture dates are unavailable; these are not included in the verified 2026 review collection.

@@ -13,7 +13,7 @@ Complete static website, exported from the latest published design on 20 Septemb
 
 1. Extract this ZIP.
 2. Upload the contents of the orkid-ria-website folder to your repository root, including index.html, assets and page folders.
-3. Commit the files. No build or package installation is required.
+3. Commit the files. The static site can be viewed alone, but the Google reviews integration requires the Cloudflare Worker build and backend.
 
 ## GitHub Pages
 
@@ -26,10 +26,10 @@ Links use relative paths to support repository subpaths and custom domains. A ne
 From the extracted website folder, run:
 
 ```sh
-python3 -m http.server 8000
+pnpm dev
 ```
 
-Open http://localhost:8000 in your browser.
+Open http://localhost:3123 in your browser. Requires Node 22.22+ and pnpm. Run `pnpm install` first. Local preview now uses Cloudflare Workers and D1; secrets are optional for the not-connected state.
 
 ## Editing
 
@@ -42,3 +42,7 @@ Google Fonts requires internet access. The location page embeds Google Maps. Res
 Photograph dates refer to associated review publication dates, not verified capture dates. Third-party image reuse rights have not been verified. Contact details and opening hours were checked against current listings without dated update records. See CONTENT_SOURCES.md for evidence.
 
 No credentials, repository history or hosting account configuration are included.
+
+## Google reviews and Cloudflare hosting
+
+See [the complete setup and verification guide](docs/google-reviews.md). Run `pnpm test` for mocked checks and `pnpm build` to create the public asset allowlist. Production Google reviews require approved API access and owner/manager OAuth; no live connection is configured. GitHub Pages cannot run this backend.
