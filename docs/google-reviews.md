@@ -1,6 +1,6 @@
 # Google reviews integration
 
-Status: implemented for Cloudflare Workers + static assets + D1. **Not connected to live Google data.** The Worker and D1 schema have been deployed to `https://orkid-ria-seafood.steep-mud-60fb.workers.dev`. No real Google request has been made. The HTML/CSS/JavaScript site remains framework-free. GitHub Pages alone cannot execute this backend; deploy this Worker on the site's Cloudflare domain.
+Status: implemented for Cloudflare Workers + static assets + D1. **Not connected to live Google data.** The Worker and D1 schema have been deployed to `https://orkidriaseafood.com`. No real Google request has been made. The HTML/CSS/JavaScript site remains framework-free. GitHub Pages alone cannot execute this backend; deploy this Worker on the site's Cloudflare domain.
 
 ## Official documentation checked on 20 September 2026
 
@@ -32,7 +32,7 @@ pnpm exec wrangler login
 pnpm exec wrangler d1 create orkid-ria-reviews
 ```
 
-The repository is configured for the existing `orkid-ria-reviews` database in the Novamas Cloudflare account and `https://orkid-ria-seafood.steep-mud-60fb.workers.dev`. For a different account, replace `database_id` with the returned ID. For a custom domain, change `vars.SITE_ORIGIN` to that exact production HTTPS origin. Set up the domain/custom route for this Worker in Cloudflare. D1 is for configuration, encrypted refresh credentials, short-lived OAuth state and rate counters only; no review table exists.
+The repository is configured for the existing `orkid-ria-reviews` database in the Novamas Cloudflare account and `https://orkidriaseafood.com`. For a different account, replace `database_id` with the returned ID. For a custom domain, change `vars.SITE_ORIGIN` to that exact production HTTPS origin. Set up the domain/custom route for this Worker in Cloudflare. D1 is for configuration, encrypted refresh credentials, short-lived OAuth state and rate counters only; no review table exists.
 
 Generate two independent random secrets using your password manager, or run this command separately for each:
 
@@ -84,3 +84,5 @@ Completed local checks: 16 mocked automated tests passed; Cloudflare deployment 
 The public reviews section is currently hidden at the owner’s request. Its automatic frontend initialisation is skipped while `hidden` is present. After live setup and approval to show it, remove `hidden` from the `data-google-reviews` section in `index.html`, then rebuild/deploy. The isolated mock preview removes that attribute only in its own response.
 
 Production origin and local origin are separate: `pnpm dev` explicitly overrides `SITE_ORIGIN` to `http://localhost:3123`, while deployment uses the production value in `wrangler.jsonc`.
+
+The production hostname uses a Cloudflare Worker route (`orkidriaseafood.com/*`) over its existing proxied DNS record. The Worker serves static assets directly, so no origin-server connection is required. Preserve the route on future deployments. The workers.dev URL remains enabled as a static-site fallback; protected API/admin requests accept only the configured production origin. Production Google OAuth callback: `https://orkidriaseafood.com/admin/reviews/callback`.

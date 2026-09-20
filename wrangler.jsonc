@@ -20,7 +20,7 @@
     }
   ],
   "vars": {
-    "SITE_ORIGIN": "https://orkid-ria-seafood.steep-mud-60fb.workers.dev"
+    "SITE_ORIGIN": "https://orkidriaseafood.com"
   },
   "triggers": {
     "crons": [
@@ -29,5 +29,12 @@
   },
   "observability": {
     "enabled": false
-  }
+  },
+  "routes": [
+    {
+      "pattern": "orkidriaseafood.com/*",
+      "zone_name": "orkidriaseafood.com"
+    }
+  ],
+  "workers_dev": true
 }
