@@ -1,0 +1,18 @@
+{
+  "name": "orkid-ria-seafood",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "pnpm build && wrangler d1 migrations apply DB --local && wrangler dev --port 3123",
+    "test": "node --test tests/*.test.mjs",
+    "deploy": "pnpm build && wrangler deploy"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.14.5",
+    "wrangler": "^4.135.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  }
+}

@@ -7,3 +7,19 @@ const slides=qa('.slide');let current=Math.max(0,slides.findIndex(s=>s.classList
 function show(n){if(!slides.length)return;current=(n+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('active',i===current);slide.setAttribute('aria-hidden',String(i!==current))});const count=q('.slide-count');if(count)count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0')}
 q('.next')?.addEventListener('click',()=>show(current+1));q('.prev')?.addEventListener('click',()=>show(current-1));show(current);
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.08});document.documentElement.classList.add('motion-ready');qa('.reveal').forEach(el=>observer.observe(el))}
+
+// Decorative card slides pause while visitors interact or prefer reduced motion.
+const cardMotion = matchMedia('(prefers-reduced-motion: reduce)');
+qa('.rotating-card').forEach((card, cardIndex) => {
+  const photos = qa('.card-photo', card);
+  let photoIndex = 0;
+  if (photos.length < 2) return;
+  setInterval(() => {
+    if (document.hidden || cardMotion.matches || card.matches(':hover, :focus-within')) return;
+    const nextIndex = (photoIndex + 1) % photos.length;
+    if (!photos[nextIndex].complete || !photos[nextIndex].naturalWidth) return;
+    photos[photoIndex].classList.remove('is-current');
+    photos[nextIndex].classList.add('is-current');
+    photoIndex = nextIndex;
+  }, 5000 + cardIndex * 1000);
+});
