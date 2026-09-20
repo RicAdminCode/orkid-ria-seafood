@@ -1,6 +1,6 @@
 # Google reviews integration
 
-Status: implemented for Cloudflare Workers + static assets + D1. **Not connected to live Google data.** No production deployment or real Google request has been made. The HTML/CSS/JavaScript site remains framework-free. GitHub Pages alone cannot execute this backend; deploy this Worker on the site's Cloudflare domain.
+Status: implemented for Cloudflare Workers + static assets + D1. **Not connected to live Google data.** The Worker and D1 schema have been deployed to `https://orkid-ria-seafood.steep-mud-60fb.workers.dev`. No real Google request has been made. The HTML/CSS/JavaScript site remains framework-free. GitHub Pages alone cannot execute this backend; deploy this Worker on the site's Cloudflare domain.
 
 ## Official documentation checked on 20 September 2026
 
@@ -32,7 +32,7 @@ pnpm exec wrangler login
 pnpm exec wrangler d1 create orkid-ria-reviews
 ```
 
-Replace the all-zero `database_id` placeholder in `wrangler.jsonc` with the returned ID. Change `vars.SITE_ORIGIN` to the exact production HTTPS origin. Set up the domain/custom route for this Worker in Cloudflare. D1 is for configuration, encrypted refresh credentials, short-lived OAuth state and rate counters only; no review table exists.
+The repository is configured for the existing `orkid-ria-reviews` database in the Novamas Cloudflare account and `https://orkid-ria-seafood.steep-mud-60fb.workers.dev`. For a different account, replace `database_id` with the returned ID. For a custom domain, change `vars.SITE_ORIGIN` to that exact production HTTPS origin. Set up the domain/custom route for this Worker in Cloudflare. D1 is for configuration, encrypted refresh credentials, short-lived OAuth state and rate counters only; no review table exists.
 
 Generate two independent random secrets using your password manager, or run this command separately for each:
 
@@ -49,10 +49,10 @@ pnpm exec wrangler secret put ADMIN_PASSWORD
 pnpm exec wrangler secret put TOKEN_ENCRYPTION_KEY
 pnpm exec wrangler d1 migrations apply DB --remote
 pnpm test
-pnpm deploy
+pnpm run deploy
 ```
 
-`pnpm deploy` builds an explicit public-file allowlist and deploys the Worker and static assets. Never deploy the repository root as a public asset directory. Do not configure CDN caching for `/api/*` or `/admin/*`; responses specify `no-store`. Do not enable request/body tracing or log OAuth callback query strings, Authorization headers, cookies, provider responses or tokens. Worker observability is disabled by default. Cloudflare edge security/rate controls can further protect these paths; do not create an edge cache rule that overrides the headers.
+`pnpm run deploy` builds an explicit public-file allowlist, applies pending remote D1 migrations, and deploys the Worker and static assets. Set the Cloudflare Build deploy command to `pnpm run deploy`. Never deploy the repository root as a public asset directory. Do not configure CDN caching for `/api/*` or `/admin/*`; responses specify `no-store`. Do not enable request/body tracing or log OAuth callback query strings, Authorization headers, cookies, provider responses or tokens. Worker observability is disabled by default. Cloudflare edge security/rate controls can further protect these paths; do not create an edge cache rule that overrides the headers.
 
 For local development, copy `.dev.vars.example` to `.dev.vars`, replace placeholders if testing OAuth, and keep it ignored. `pnpm dev` builds assets, applies local D1 migrations and serves both site and Worker on port 3123. It works without secrets: the widget shows the truthful not-connected state, and administration is locked. Re-run `pnpm build` after editing static files (Wrangler watches the generated assets). Local credentials/database remain in ignored `.dev.vars` and `.wrangler/`. Do not use the earlier Python root-directory server with secrets present.
 
@@ -82,3 +82,5 @@ To reproduce the isolated browser fixture after `pnpm build`, run `node tests/br
 Completed local checks: 16 mocked automated tests passed; Cloudflare deployment dry run passed; local D1 migration and Worker/asset wiring passed; unauthenticated admin returned 401, private source/secret paths returned 404; mobile review layout checked at 390×844 without horizontal overflow; native Enter/Space expansion and Enter pagination checked in the mock browser fixture. No live Google acceptance checks have run.
 
 The public reviews section is currently hidden at the owner’s request. Its automatic frontend initialisation is skipped while `hidden` is present. After live setup and approval to show it, remove `hidden` from the `data-google-reviews` section in `index.html`, then rebuild/deploy. The isolated mock preview removes that attribute only in its own response.
+
+Production origin and local origin are separate: `pnpm dev` explicitly overrides `SITE_ORIGIN` to `http://localhost:3123`, while deployment uses the production value in `wrangler.jsonc`.
