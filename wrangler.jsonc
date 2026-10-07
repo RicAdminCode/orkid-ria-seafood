@@ -31,6 +31,10 @@
     {
       "pattern": "orkidriaseafood.com/*",
       "zone_name": "orkidriaseafood.com"
+    },
+    {
+      "pattern": "www.orkidriaseafood.com/*",
+      "zone_name": "orkidriaseafood.com"
     }
   ],
   "workers_dev": true

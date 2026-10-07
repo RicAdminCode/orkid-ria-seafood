@@ -40,3 +40,10 @@ test('robots points to a sitemap containing exactly five public canonical pages'
  assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]),['/','/menu/','/about/','/restaurant/','/reservation/'].map(path=>origin+path));
  const build=await readFile('scripts/build.mjs','utf8');assert.match(build,/'robots.txt','sitemap.xml'/);
 });
+test('Cloudflare routes canonical and www hosts through the normalisation worker',async()=>{
+ const config=JSON.parse(await readFile('wrangler.jsonc','utf8'));
+ assert.deepEqual(config.routes,[
+  {pattern:'orkidriaseafood.com/*',zone_name:'orkidriaseafood.com'},
+  {pattern:'www.orkidriaseafood.com/*',zone_name:'orkidriaseafood.com'}
+ ]);
+});
