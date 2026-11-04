@@ -1,0 +1,622 @@
+[
+  {
+    "file": "index.html",
+    "title": "Orkid Ria Seafood Restaurant | Pantai Tengah, Langkawi",
+    "title_chars": 54,
+    "description": "Visit Orkid Ria Seafood Restaurant at Lot 418, Pantai Tengah, Langkawi. Choose live seafood, explore menu highlights and call to arrange your table.",
+    "h1": [
+      "Fresh Seafood. Cooked Your Way."
+    ],
+    "h2": [
+      "A seafood meal worth gathering for.",
+      "Around the table."
+    ],
+    "main_words": 69,
+    "schema_types": [
+      "Restaurant",
+      "WebSite",
+      "WebPage"
+    ],
+    "restaurant": {
+      "@type": "Restaurant",
+      "@id": "https://orkidriaseafood.com/#restaurant",
+      "name": "Orkid Ria Seafood Restaurant",
+      "url": "https://orkidriaseafood.com/",
+      "image": [
+        "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg"
+      ],
+      "telephone": "+60176144128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 418, Jalan Pantai Tengah, Jalan Teluk Baru, Mukim Kedawang",
+        "postalCode": "07100",
+        "addressLocality": "Langkawi",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      },
+      "servesCuisine": "Seafood",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "13:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": "https://orkidriaseafood.com/menu/",
+      "acceptsReservations": "https://orkidriaseafood.com/reservation/",
+      "hasMap": "https://maps.app.goo.gl/AVcjjYDYoPyyYBx16",
+      "sameAs": [
+        "https://www.facebook.com/pages/Orkid-Ria-Seafood-Restaurant/162433680476359",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "menu": "https://orkidriaseafood.com/menu/"
+    },
+    "images": 16,
+    "images_no_alt": 0,
+    "images_no_dimensions": 0,
+    "assets": [
+      {
+        "path": "/styles.css",
+        "bytes": 21476
+      },
+      {
+        "path": "/reviews.css",
+        "bytes": 2062
+      },
+      {
+        "path": "/assets/favicon.svg",
+        "bytes": 248
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria1.webp",
+        "bytes": 71456
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria2.webp",
+        "bytes": 75028
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria3.webp",
+        "bytes": 79654
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria5.webp",
+        "bytes": 99122
+      },
+      {
+        "path": "/assets/2026/feb-0b.webp",
+        "bytes": 352486
+      },
+      {
+        "path": "/assets/2026/feb-08.webp",
+        "bytes": 352948
+      },
+      {
+        "path": "/assets/2026/feb-0c.webp",
+        "bytes": 251798
+      },
+      {
+        "path": "/assets/2026/feb-07.webp",
+        "bytes": 125098
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria1.webp",
+        "bytes": 71456
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria2.webp",
+        "bytes": 75028
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria5.webp",
+        "bytes": 99122
+      },
+      {
+        "path": "/assets/2026/feb-0a.webp",
+        "bytes": 198182
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/assets/2026/feb-0c.webp",
+        "bytes": 251798
+      },
+      {
+        "path": "/assets/gallery/32-40-c3-00.webp",
+        "bytes": 161412
+      },
+      {
+        "path": "/reviews.js",
+        "bytes": 6280
+      },
+      {
+        "path": "/app.js",
+        "bytes": 5121
+      }
+    ]
+  },
+  {
+    "file": "menu/index.html",
+    "title": "Seafood Menu Highlights | Orkid Ria Langkawi",
+    "title_chars": 44,
+    "description": "Explore Orkid Ria\u2019s seafood menu highlights, from lobster and crab to prawns and fish. Contact our Pantai Tengah restaurant for today\u2019s menu and prices.",
+    "h1": [
+      "Choose Your Seafood. Make It Your Meal."
+    ],
+    "h2": [
+      "Seafood & Shared Plates",
+      "Make the meal your own."
+    ],
+    "main_words": 180,
+    "schema_types": [
+      "Restaurant",
+      "WebSite",
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "restaurant": {
+      "@type": "Restaurant",
+      "@id": "https://orkidriaseafood.com/#restaurant",
+      "name": "Orkid Ria Seafood Restaurant",
+      "url": "https://orkidriaseafood.com/",
+      "image": [
+        "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg"
+      ],
+      "telephone": "+60176144128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 418, Jalan Pantai Tengah, Jalan Teluk Baru, Mukim Kedawang",
+        "postalCode": "07100",
+        "addressLocality": "Langkawi",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      },
+      "servesCuisine": "Seafood",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "13:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": "https://orkidriaseafood.com/menu/",
+      "acceptsReservations": "https://orkidriaseafood.com/reservation/",
+      "hasMap": "https://maps.app.goo.gl/AVcjjYDYoPyyYBx16",
+      "sameAs": [
+        "https://www.facebook.com/pages/Orkid-Ria-Seafood-Restaurant/162433680476359",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "menu": "https://orkidriaseafood.com/menu/"
+    },
+    "images": 7,
+    "images_no_alt": 0,
+    "images_no_dimensions": 0,
+    "assets": [
+      {
+        "path": "/styles.css",
+        "bytes": 21476
+      },
+      {
+        "path": "/assets/favicon.svg",
+        "bytes": 248
+      },
+      {
+        "path": "/assets/2026/feb-0c.webp",
+        "bytes": 251798
+      },
+      {
+        "path": "/assets/2026/feb-0c.webp",
+        "bytes": 251798
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fd.webp",
+        "bytes": 184634
+      },
+      {
+        "path": "/assets/gallery/32-40-c3-00.webp",
+        "bytes": 161412
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fa.webp",
+        "bytes": 146162
+      },
+      {
+        "path": "/assets/2026/feb-0a.webp",
+        "bytes": 198182
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/app.js",
+        "bytes": 5121
+      }
+    ]
+  },
+  {
+    "file": "about/index.html",
+    "title": "Our Story & Dining Experience | Orkid Ria Langkawi",
+    "title_chars": 50,
+    "description": "Explore Orkid Ria\u2019s Langkawi story, from its Pantai Cenang beginnings to seafood, shared tables and waterside dining in Pantai Tengah today.",
+    "h1": [
+      "Langkawi Roots. A Place to Gather."
+    ],
+    "h2": [
+      "A familiar name. A new chapter.",
+      "By the water. Around the table.",
+      "Begin at the tanks. Make it your meal.",
+      "Bring your people. Stay for the table."
+    ],
+    "main_words": 417,
+    "schema_types": [
+      "Restaurant",
+      "WebSite",
+      "AboutPage",
+      "BreadcrumbList"
+    ],
+    "restaurant": {
+      "@type": "Restaurant",
+      "@id": "https://orkidriaseafood.com/#restaurant",
+      "name": "Orkid Ria Seafood Restaurant",
+      "url": "https://orkidriaseafood.com/",
+      "image": [
+        "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg"
+      ],
+      "telephone": "+60176144128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 418, Jalan Pantai Tengah, Jalan Teluk Baru, Mukim Kedawang",
+        "postalCode": "07100",
+        "addressLocality": "Langkawi",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      },
+      "servesCuisine": "Seafood",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "13:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": "https://orkidriaseafood.com/menu/",
+      "acceptsReservations": "https://orkidriaseafood.com/reservation/",
+      "hasMap": "https://maps.app.goo.gl/AVcjjYDYoPyyYBx16",
+      "sameAs": [
+        "https://www.facebook.com/pages/Orkid-Ria-Seafood-Restaurant/162433680476359",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "menu": "https://orkidriaseafood.com/menu/"
+    },
+    "images": 5,
+    "images_no_alt": 0,
+    "images_no_dimensions": 0,
+    "assets": [
+      {
+        "path": "/styles.css",
+        "bytes": 21476
+      },
+      {
+        "path": "/assets/favicon.svg",
+        "bytes": 248
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria5.webp",
+        "bytes": 99122
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria1.webp",
+        "bytes": 71456
+      },
+      {
+        "path": "/assets/2026/feb-08.webp",
+        "bytes": 352948
+      },
+      {
+        "path": "/assets/2026/feb-0b.webp",
+        "bytes": 352486
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/app.js",
+        "bytes": 5121
+      }
+    ]
+  },
+  {
+    "file": "restaurant/index.html",
+    "title": "Location & Opening Hours | Orkid Ria Langkawi",
+    "title_chars": 45,
+    "description": "Find Orkid Ria at Lot 418, Jalan Pantai Tengah, Langkawi. Open daily 1 pm\u201311 pm. Get directions, view the restaurant gallery and contact the team.",
+    "h1": [
+      "Find Us in Pantai Tengah."
+    ],
+    "h2": [
+      "Around Orkid Ria.",
+      "A little planning. A shared meal."
+    ],
+    "main_words": 253,
+    "schema_types": [
+      "Restaurant",
+      "WebSite",
+      "WebPage",
+      "BreadcrumbList"
+    ],
+    "restaurant": {
+      "@type": "Restaurant",
+      "@id": "https://orkidriaseafood.com/#restaurant",
+      "name": "Orkid Ria Seafood Restaurant",
+      "url": "https://orkidriaseafood.com/",
+      "image": [
+        "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg"
+      ],
+      "telephone": "+60176144128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 418, Jalan Pantai Tengah, Jalan Teluk Baru, Mukim Kedawang",
+        "postalCode": "07100",
+        "addressLocality": "Langkawi",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      },
+      "servesCuisine": "Seafood",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "13:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": "https://orkidriaseafood.com/menu/",
+      "acceptsReservations": "https://orkidriaseafood.com/reservation/",
+      "hasMap": "https://maps.app.goo.gl/AVcjjYDYoPyyYBx16",
+      "sameAs": [
+        "https://www.facebook.com/pages/Orkid-Ria-Seafood-Restaurant/162433680476359",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "menu": "https://orkidriaseafood.com/menu/"
+    },
+    "images": 24,
+    "images_no_alt": 0,
+    "images_no_dimensions": 0,
+    "assets": [
+      {
+        "path": "/styles.css",
+        "bytes": 21476
+      },
+      {
+        "path": "/assets/favicon.svg",
+        "bytes": 248
+      },
+      {
+        "path": "/assets/2026/feb-07.webp",
+        "bytes": 125098
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria1.webp",
+        "bytes": 71456
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria2.webp",
+        "bytes": 75028
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria3.webp",
+        "bytes": 79654
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria5.webp",
+        "bytes": 99122
+      },
+      {
+        "path": "/assets/2026/feb-08.webp",
+        "bytes": 352948
+      },
+      {
+        "path": "/assets/2026/feb-0c.webp",
+        "bytes": 251798
+      },
+      {
+        "path": "/assets/2026/feb-0a.webp",
+        "bytes": 198182
+      },
+      {
+        "path": "/assets/gallery/32-23-a9-39.webp",
+        "bytes": 158280
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fa.webp",
+        "bytes": 146162
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fb.webp",
+        "bytes": 136180
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fc.webp",
+        "bytes": 89248
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fd.webp",
+        "bytes": 184634
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-fe.webp",
+        "bytes": 163686
+      },
+      {
+        "path": "/assets/gallery/32-40-c2-ff.webp",
+        "bytes": 271600
+      },
+      {
+        "path": "/assets/gallery/32-40-c3-00.webp",
+        "bytes": 161412
+      },
+      {
+        "path": "/assets/gallery/32-5c-64-aa.webp",
+        "bytes": 156280
+      },
+      {
+        "path": "/assets/gallery/32-5c-64-ac.webp",
+        "bytes": 104984
+      },
+      {
+        "path": "/assets/gallery/32-5c-64-ad.webp",
+        "bytes": 207080
+      },
+      {
+        "path": "/assets/gallery/32-5c-64-af.webp",
+        "bytes": 154096
+      },
+      {
+        "path": "/assets/2026/feb-07.webp",
+        "bytes": 125098
+      },
+      {
+        "path": "/assets/2026/feb-0b.webp",
+        "bytes": 352486
+      },
+      {
+        "path": "/assets/2026/sep-janine.webp",
+        "bytes": 219036
+      },
+      {
+        "path": "/app.js",
+        "bytes": 5121
+      }
+    ]
+  },
+  {
+    "file": "reservation/index.html",
+    "title": "Table Reservations & Contact | Orkid Ria Langkawi",
+    "title_chars": 49,
+    "description": "Call Orkid Ria Seafood Restaurant in Pantai Tengah, Langkawi, to request a table. Share your date, time and group size and confirm availability with our team.",
+    "h1": [
+      "Let\u2019s Plan Your Table."
+    ],
+    "h2": [
+      "Before you get in touch."
+    ],
+    "main_words": 104,
+    "schema_types": [
+      "Restaurant",
+      "WebSite",
+      "ContactPage",
+      "BreadcrumbList"
+    ],
+    "restaurant": {
+      "@type": "Restaurant",
+      "@id": "https://orkidriaseafood.com/#restaurant",
+      "name": "Orkid Ria Seafood Restaurant",
+      "url": "https://orkidriaseafood.com/",
+      "image": [
+        "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg"
+      ],
+      "telephone": "+60176144128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 418, Jalan Pantai Tengah, Jalan Teluk Baru, Mukim Kedawang",
+        "postalCode": "07100",
+        "addressLocality": "Langkawi",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      },
+      "servesCuisine": "Seafood",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "13:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": "https://orkidriaseafood.com/menu/",
+      "acceptsReservations": "https://orkidriaseafood.com/reservation/",
+      "hasMap": "https://maps.app.goo.gl/AVcjjYDYoPyyYBx16",
+      "sameAs": [
+        "https://www.facebook.com/pages/Orkid-Ria-Seafood-Restaurant/162433680476359",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "menu": "https://orkidriaseafood.com/menu/"
+    },
+    "images": 1,
+    "images_no_alt": 0,
+    "images_no_dimensions": 0,
+    "assets": [
+      {
+        "path": "/styles.css",
+        "bytes": 21476
+      },
+      {
+        "path": "/assets/favicon.svg",
+        "bytes": 248
+      },
+      {
+        "path": "/assets/langkawi-app/orkid-ria4.webp",
+        "bytes": 82792
+      },
+      {
+        "path": "/app.js",
+        "bytes": 5121
+      }
+    ]
+  }
+]

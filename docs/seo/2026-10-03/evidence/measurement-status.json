@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-03",
+  "google_credentials": "not configured",
+  "pagespeed_api": "429 RESOURCE_EXHAUSTED; no Lighthouse or CrUX result",
+  "search_console": "not accessed",
+  "ga4": "not accessed",
+  "backlink_api": "Moz/Bing not configured; no backlink inventory measured",
+  "rank_or_volume_data": "not measured; exploratory web search only",
+  "drift": "No stored drift database; repository before/after JSON exists but is not an indexation record",
+  "local_tests": 40,
+  "production_deployed_this_audit": false
+}

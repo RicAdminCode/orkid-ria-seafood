@@ -24,6 +24,23 @@ test('local SITE_ORIGIN disables production normalisation',async()=>{
  const response=await worker.fetch(new Request(origin+'/?release=test'),environment('http://localhost:3123'));
  assert.equal(response.status,200);
 });
+test('campaign attribution survives host/path redirects and preview flag removal',async()=>{
+ const query='utm_source=editorial&utm_medium=referral&utm_campaign=pantai_tengah&gclid=sample-click';
+ const response=await worker.fetch(new Request(`https://www.orkidriaseafood.com/about/index.html?release=preview&${query}`),environment());
+ assert.equal(response.status,301);
+ assert.equal(response.headers.get('Location'),`${origin}/about/?${query}`);
+ const landing=await worker.fetch(new Request(response.headers.get('Location')),environment());
+ assert.equal(landing.status,200);
+ assert.equal(landing.headers.get('Location'),null);
+ assert.equal(await landing.text(),`${origin}/about/?${query}`);
+});
+test('canonical pages preserve campaign, referral and repeated query parameters',async()=>{
+ for(const query of ['utm_source=instagram&utm_medium=social','fbclid=sample&ref=hotel','utm_content=one&utm_content=two']){
+  const url=`${origin}/menu/?${query}`;
+  const response=await worker.fetch(new Request(url),environment());
+  assert.equal(response.status,200);assert.equal(await response.text(),url);
+ }
+});
 test('unknown page retains true 404',async()=>{
  const response=await worker.fetch(new Request(origin+'/missing-page'),environment());assert.equal(response.status,404);
 });

@@ -1,0 +1,111 @@
+{
+  "viewport": {
+    "width": 1543,
+    "height": 984
+  },
+  "date": "2026-11-04",
+  "measurements": [
+    {
+      "selector": ".hero-main",
+      "width": 1532,
+      "height": 984,
+      "referenceSection": "section_home_hero",
+      "referenceHeight": 984,
+      "delta": 0
+    },
+    {
+      "selector": ".home-features",
+      "width": 1532,
+      "height": 912,
+      "referenceSection": "section_features",
+      "referenceHeight": 911.59375,
+      "delta": 0.40625
+    },
+    {
+      "selector": ".statement-section",
+      "width": 1532,
+      "height": 960,
+      "referenceSection": "section_why",
+      "referenceHeight": 960,
+      "delta": 0
+    },
+    {
+      "selector": ".seafood-strip",
+      "width": 1532,
+      "height": 128,
+      "referenceSection": "section_logos",
+      "referenceHeight": 128,
+      "delta": 0
+    },
+    {
+      "selector": ".dining-journey",
+      "width": 1532,
+      "height": 4637.578125,
+      "referenceSection": "section_vertical-slider",
+      "referenceHeight": 4637.578125,
+      "delta": 0.0
+    },
+    {
+      "selector": ".experience-grid",
+      "width": 1532,
+      "height": 990,
+      "referenceSection": "section_models",
+      "referenceHeight": 990.171875,
+      "delta": -0.171875
+    },
+    {
+      "selector": ".home-menu",
+      "width": 1532,
+      "height": 1008,
+      "referenceSection": "section_accessories",
+      "referenceHeight": 1007.984375,
+      "delta": 0.015625
+    },
+    {
+      "selector": ".editorial-scene",
+      "width": 1532,
+      "height": 800,
+      "referenceSection": "section_testimonials",
+      "referenceHeight": 800,
+      "delta": 0
+    },
+    {
+      "selector": ".home-faq",
+      "width": 1532,
+      "height": 1268.78125,
+      "referenceSection": "section_faq",
+      "referenceHeight": 1268.78125,
+      "delta": 0.0
+    },
+    {
+      "selector": ".home-gallery",
+      "width": 1532,
+      "height": 1003,
+      "referenceSection": "section_gallery",
+      "referenceHeight": 1002.5625,
+      "delta": 0.4375
+    },
+    {
+      "selector": ".closing-cta",
+      "width": 1532,
+      "height": 445,
+      "referenceSection": "section_cta",
+      "referenceHeight": 444.765625,
+      "delta": 0.234375
+    }
+  ],
+  "withinOnePixel": true,
+  "limits": [
+    "Section widths/heights at this viewport only; not a pixel-image identity claim.",
+    "Different text, images, and requested dark palette remain intentional.",
+    "Footer includes additional existing restaurant information.",
+    "Mobile follows responsive patterns; section heights differ with content."
+  ],
+  "supersededByUserChanges": {
+    "selectors": [
+      ".hero-main",
+      ".home-features"
+    ],
+    "reason": "Later browser comments requested 60% hero height and CruiseOS centered seafood carousel."
+  }
+}

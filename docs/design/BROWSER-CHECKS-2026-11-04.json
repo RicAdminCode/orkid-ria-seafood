@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-04",
+  "origin": "http://localhost:3123",
+  "routes": [
+    "/",
+    "/menu/",
+    "/about/",
+    "/restaurant/",
+    "/reservation/"
+  ],
+  "viewportWidths": [
+    1440,
+    390
+  ],
+  "results": {
+    "allStatus200": true,
+    "oneH1PerPage": true,
+    "noHorizontalOverflow": true,
+    "noBrokenLoadedImages": true
+  },
+  "interactions": {
+    "mobileNavigation": true,
+    "escapeClosesAndReturnsFocus": true,
+    "carouselClick": true,
+    "carouselKeyboard": true,
+    "motionToggle": true
+  },
+  "testSuite": {
+    "passed": 40,
+    "failed": 0
+  },
+  "buildMatchesSource": true,
+  "notes": [
+    "Browser emulation, not physical device testing.",
+    "No production deployment.",
+    "Existing third-party photo rights remain unverified."
+  ]
+}

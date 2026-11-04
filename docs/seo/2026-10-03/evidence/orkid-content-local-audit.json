@@ -1,0 +1,349 @@
+{
+  "audit_date": "2026-10-03",
+  "scope": "Read-only content, local SEO, E-E-A-T, AI citation readiness and search-intent audit; five repository pages plus public search evidence.",
+  "local_vs_live": {
+    "local": "Inspected HTML and CONTENT_SOURCES.md in /Users/rl/Projects/orkidriaseafood; current local copy includes four About chapters.",
+    "live": "All five production URLs returned HTTP403 to Python urllib from this environment; the web research tool also could not open the homepage. This does not establish a universal outage or verified Googlebot blocking. Local improvements must not be reported as live.",
+    "search": "Exploratory web searches on 3 October2026, not a geo-pinned Google rank tracking run. No site: result was returned for the domain in the searches reviewed; this is NOT proof of deindexing. GSC, GBP ownership/configuration, local pack positions, click data, volume and difficulty metrics were unavailable."
+  },
+  "executive_finding": "The strongest content opportunity is to become the authoritative current source for Orkid Ria at Lot418, PantaiTengah. Historic Cenang listings and old phone/hours remain easy to find. Adding generic prose will not solve that identity conflict. Publish an owner-approved current menu and practical visitor facts, establish consistent verified listings, and earn editorial coverage using real historical evidence and original photographs.",
+  "strengths": [
+    "Consistent visible brand, Lot418 address, +60176144128 and daily13:00–23:00 across all five local pages and Restaurant JSON-LD.",
+    "Clear page roles and contextual links: restaurant overview, menu highlights, history/experience, visit/gallery, table requests.",
+    "About now distinguishes historic PantaiCenang from current PantaiTengah and attributes1989/2004 history; avoids inventing founder identity or uninterrupted operation.",
+    "Menu explicitly says photographs are highlights, not a complete current menu. Reservations clearly require restaurant confirmation. Allergen guidance avoids guarantees.",
+    "Reviews are hidden and there is no fabricated AggregateRating. This is appropriate until authorized live data works.",
+    "Static HTML provides text without a client-side rendering dependency; descriptive image captions and alt text explain real scenes."
+  ],
+  "findings": [
+    {
+      "id": "C01",
+      "priority": "high",
+      "title": "Historic and current business information conflict across prominent public listings",
+      "evidence": "Sluurpy lists Lot1225/Cenang, +6049554128 and lunch-only hours despite a June2025 update label. PetitFute shows the old phone and split hours. Tripmoo2026 still places the restaurant in Cenang. Wanderlog mixes current address/phone with a Cenang description. LangkawiApp and the current Kedawang Tripadvisor listing match Lot418/PantaiTengah.",
+      "impact": "Returning visitors and search/AI systems can receive contradictory location/contact answers. This is a direct customer-navigation problem as well as an entity-confidence issue.",
+      "action": "Owner confirms canonical NAP/postcode, verified map listing and move relationship. Update owned GBP/Facebook first; submit corrections to living directory listings and request a short current-location note on historically relevant articles. Preserve legitimate dated history; do not try to rewrite every old review.",
+      "owner": "Restaurant owner + SEO/outreach",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "id": "C02",
+      "priority": "high",
+      "title": "Menu page does not yet satisfy menu-and-price intent",
+      "evidence": "Local /menu has six photographic categories and ordering advice, but no verified dish names/preparations, portions, current unit prices, applicable taxes/charges, or maintained menu date. Telaga first-party menu/reservation page exposes detailed preparations, units, minimum weights and prices.",
+      "impact": "A visitor searching OrkidRia menu or seafood prices must contact staff or return to old third-party menu pages.",
+      "action": "Obtain a signed-off current menu and publish accessible HTML categories with actual dish names, ingredients/preparation where verified, portion/unit basis and current prices or market-price wording. Display date reviewed, taxes/service charges and availability caveat accurately. Keep downloadable PDF optional, not the only menu. No prices/species/preparations should be copied from historic blogs.",
+      "owner": "Restaurant manager provides facts; frontend/content implements",
+      "sources": [
+        "S7"
+      ]
+    },
+    {
+      "id": "C03",
+      "priority": "high",
+      "title": "Operational facts still lack first-party confirmation",
+      "evidence": "CONTENT_SOURCES.md flags postcode07000/07100 conflict and unconfirmed parking, step-free access, payment methods, capacity, kitchen last order, holidays, official social identity, and WhatsApp availability.",
+      "impact": "Missing decision information blocks families, groups and visitors with access needs; unsupported promises would damage trust.",
+      "action": "Use one owner questionnaire to confirm exact address/map pin, hours versus kitchen last order, special holidays, booking response process, parking/drop-off, step-free path/toilets, payment methods and dietary handling. Add only approved answers to /restaurant/ or /reservation/.",
+      "owner": "Restaurant owner",
+      "sources": [
+        "L1"
+      ]
+    },
+    {
+      "id": "C04",
+      "priority": "medium",
+      "title": "Relocation answer is buried in About narrative",
+      "evidence": "About explains roots and return, while /restaurant/ has address and hours but no direct answer for visitors searching whether OrkidRia is still inCenang or has moved.",
+      "impact": "The Visit page misses an unusually relevant branded question evident in conflicting search results.",
+      "action": "Add a concise visible question and answer on /restaurant/: Where is OrkidRia now? Then current Lot418/PantaiTengah address and directions. Link About for the earlierCenang history. No new thin relocation landing page required.",
+      "safe_copy": "Orkid Ria Seafood Restaurant is now at Lot 418, Jalan Pantai Tengah, Langkawi. Our earlier Pantai Cenang location is part of our history; use the current directions link when planning your visit.",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S5",
+        "L1"
+      ]
+    },
+    {
+      "id": "C05",
+      "priority": "medium",
+      "title": "Useful question answers can be made easier to scan and quote",
+      "evidence": "Existing copy covers hours, selection/price agreement and request confirmation, but answers are dispersed through cards and paragraphs.",
+      "action": "Add a small visitor FAQ using already-supported facts, allocated to relevant pages. Use visible semantic headings/details and concise answers. Do not promise FAQ rich results: Google discontinued them inMay2026. No llms.txt or special AI schema is required forGoogle visibility.",
+      "sources": [
+        "G2",
+        "G5"
+      ]
+    },
+    {
+      "id": "C06",
+      "priority": "medium",
+      "title": "First-hand brand evidence is limited despite good sourced history",
+      "evidence": "History relies on tourism/editorial sources; original operator interview, approved chef/team identities, dated current menu and licensed behind-the-scenes photos are absent.",
+      "action": "Record a short owner interview and a chef-led seafood-ordering photo session. Document factual captions, recipes/preparations currently offered and publication rights. Publish only details signed off by the restaurant; keep founder/Kuah/orchid-garden story in research notes until corroborated.",
+      "sources": [
+        "L1"
+      ]
+    },
+    {
+      "id": "C07",
+      "priority": "high",
+      "title": "Photo provenance does not establish commercial reuse rights",
+      "evidence": "Current images come from third-party reviews and directory material; CONTENT_SOURCES explicitly says rights are unresolved.",
+      "impact": "Launch and PR asset readiness are constrained. This is a rights/trust issue, not a claimed directGoogle ranking penalty.",
+      "action": "Commission or obtain written permissions for a curated original set: entrance and sign, dining space, tanks/order process, current dishes, owner/team where consented. Keep rights, credits and permitted channels in an asset ledger.",
+      "sources": [
+        "L1"
+      ]
+    },
+    {
+      "id": "C08",
+      "priority": "medium",
+      "title": "Reputation channels need owner control and a compliant review workflow",
+      "evidence": "Current Tripadvisor localized snapshots show the business profile as unclaimed. Google ownership, review recency and responses have not been authenticated. Website review component remains hidden.",
+      "action": "Confirm/claim eligible existing listings; verify the correct current GBP rather than create duplicates. Offer a neutral review link to genuine customers without filtering satisfaction, rewards, quotas or prescribed keywords. Reply helpfully to positive and negative feedback. Keep review integration hidden until authorized API verification succeeds.",
+      "sources": [
+        "S6",
+        "G1",
+        "G3",
+        "G4"
+      ]
+    },
+    {
+      "id": "C09",
+      "priority": "medium",
+      "title": "Local discovery should target actual dining intent, not generic top-ten content",
+      "evidence": "Exploratory nonbrand searches show restaurant sites, Tripadvisor category pages and travel guides. A single restaurant cannot honestly duplicate impartial comparison intent.",
+      "action": "Prioritize PantaiTengah seafood restaurant and branded menu/location/reservation queries on existing pages. Win broader best-seafood-Langkawi exposure through independent editorial inclusion, useful original facts and reviews. Do not self-award best/no1 status or generate doorway pages for nearby places.",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "id": "C10",
+      "priority": "low",
+      "title": "Some current headings favor brand tone over explicit information labels",
+      "evidence": "Menu H1 ChooseYourSeafood.MakeItYourMeal and reservation H1 LetsPlanYourTable are clear within context but less direct than page purpose. About poetic headings have descriptive eyebrow labels.",
+      "action": "Keep the distinctive display copy; ensure adjacent visible labels clearly identify SeafoodMenuHighlights, TableReservations, CurrentLocation. Change only where usability improves; there is no need to stuff brand+location into everyheading.",
+      "sources": [
+        "L1"
+      ]
+    }
+  ],
+  "page_intent_map": [
+    {
+      "url": "/",
+      "primary": "seafood restaurant Pantai Tengah",
+      "secondary": [
+        "Orkid Ria Seafood Restaurant",
+        "Orkid Ria Langkawi",
+        "seafood restaurant Langkawi"
+      ],
+      "intent": "Evaluate restaurant and act",
+      "current_fit": "Good overview; prominent call/WhatsApp/hours and specific location.",
+      "next_content": "One concise brand/location statement; approved specialities when provided; links to current menu, current location and story. No arbitrary wordcount expansion."
+    },
+    {
+      "url": "/menu/",
+      "primary": "Orkid Ria menu",
+      "secondary": [
+        "Orkid Ria menu prices",
+        "Orkid Ria seafood menu",
+        "live seafood Pantai Tengah"
+      ],
+      "intent": "Decide what to eat and what budget/ordering method to expect",
+      "current_fit": "Partial: honest photographic highlights, but current detailed menu/price information absent.",
+      "next_content": "Owner-approved structured HTML menu, pricing units and effective/review date. Photographs correspond to current named dishes. This is the largest content conversion gap."
+    },
+    {
+      "url": "/restaurant/",
+      "primary": "Orkid Ria location",
+      "secondary": [
+        "Orkid Ria opening hours",
+        "Orkid Ria Pantai Tengah address",
+        "Orkid Ria new location"
+      ],
+      "intent": "Find correct premises and plan arrival",
+      "current_fit": "Good address/hours/map link/gallery; still missing verified access/parking/last-order facts and direct move clarification.",
+      "next_content": "Current-location FAQ, owner-confirmed arrival/access/parking facts and special-hours process."
+    },
+    {
+      "url": "/reservation/",
+      "primary": "Orkid Ria reservation",
+      "secondary": [
+        "Orkid Ria contact",
+        "Orkid Ria WhatsApp",
+        "group dinner Pantai Tengah"
+      ],
+      "intent": "Request table with reliable next step",
+      "current_fit": "Good direct-contact action and explicit confirmation requirement.",
+      "next_content": "If confirmed, booking lead time, last-order cutoff, group availability process and seating requests. Do not invent capacity or promise instant confirmation."
+    },
+    {
+      "url": "/about/",
+      "primary": "Orkid Ria history",
+      "secondary": [
+        "Orkid Ria dining experience",
+        "Orkid Ria Pantai Cenang history"
+      ],
+      "intent": "Understand brand authenticity and present dining setting",
+      "current_fit": "Strong sourced four-chapter narrative; historicalclaims properly qualified.",
+      "next_content": "Owner-approved first-person heritage/chef perspective and original photography, exact dates only from records. Avoid duplicating menu/visit details beyond short contextuallinks."
+    }
+  ],
+  "safe_candidate_faq_copy": [
+    {
+      "page": "/restaurant/",
+      "question": "Where is Orkid Ria Seafood Restaurant now?",
+      "answer": "Find us at Lot418 on JalanPantaiTengah, Langkawi. Use our current map link for directions to the restaurant. Our earlier PantaiCenang setting is covered in our story."
+    },
+    {
+      "page": "/restaurant/",
+      "question": "What are the opening hours?",
+      "answer": "Our listed hours are1:00pm–11:00pm every day. Contact the restaurant before making a special journey or to discuss your preferred arrival time.",
+      "note": "Matches current site and corroboratinglistings; owner should verify beforepubliclaunch."
+    },
+    {
+      "page": "/menu/",
+      "question": "How do I choose and order seafood?",
+      "answer": "Ask the team what is available, discuss your preferred preparation and portions, and confirm seafood weight and total price before ordering."
+    },
+    {
+      "page": "/menu/",
+      "question": "Is this the full current menu?",
+      "answer": "The photographs show a selection of dishes served atOrkidRia. Contact the restaurant for today’s availability, preparation options and prices."
+    },
+    {
+      "page": "/reservation/",
+      "question": "How do I request a table?",
+      "answer": "Call or WhatsApp the team with your date, preferred time and number of guests. Your table is booked only when the restaurant confirms it."
+    }
+  ],
+  "personas_without_synthetic_scores": [
+    {
+      "persona": "Returning visitor who remembers the old Cenang restaurant",
+      "need": "Correct currentaddress and reassurance ofidentity",
+      "main_gap": "Cenang directory drift; explicit relocationanswer"
+    },
+    {
+      "persona": "Budget-conscious seafood diner",
+      "need": "Currentprices, units and preparation options",
+      "main_gap": "Photohighlights cannot answer actualspend"
+    },
+    {
+      "persona": "Family/group organiser",
+      "need": "Table availability, seating arrangements and bookingconfirmation",
+      "main_gap": "Verifiedcapacity/access/leadtimefacts"
+    },
+    {
+      "persona": "Guest with allergy, dietary or mobility requirements",
+      "need": "Specific verifiedprocedure andaccess information",
+      "main_gap": "Ownerconfirmation; never inferhalal or cross-contaminationsafety"
+    },
+    {
+      "persona": "Journalist or AI-assisted travel researcher",
+      "need": "Currentcanonical facts, dated sources and usable licensedassets",
+      "main_gap": "Publication-ready fact sheet, spokesperson andrights-clearedphotography"
+    }
+  ],
+  "local_action_sequence": [
+    "Owner signs off one currentfactsheet including maplistingidentity and postcode; do not silently mixoldnewprofiles.",
+    "VerifyGBP ownership and correct currentcategory/address/pin/phone/hours, specialhours, officialwebsite, menuURL and bookingURL. Keep realworldname withoutkeywordstuffing.",
+    "ReconcileFacebook, Tripadvisor, LangkawiApp, Wanderlog, Sluurpy and PetitFute; record submitted/verifiedstatus. Historicaldatedfeatures canretainoldcontext with optionalcurrentlocationnote.",
+    "Publish maintainedHTMLmenu and a few directvisitanswers; currentfacts should agree acrosswebsite/schema/listings.",
+    "Get originallicensedimages and interview; use same fact sheet forpress andhotelconcierges.",
+    "Request genuinefeedbackneutrally and respond consistently; trackactualreviewresponseswithout arbitrary quotas.",
+    "MeasureGSCbranded/nonbranded queries andmenu/visit entrances, call/WhatsApp/directions clicks and confirmedcovers separately. A click is not abooking."
+  ],
+  "ai_readiness": {
+    "good": "PlainHTML, identifiableRestaurantentity, consistentlocalNAP and sourcedhistoricalpassages.",
+    "gaps": "Currentmenuprices/accessfacts absent; historicaldirectorydrift. The strongest improvements are uniquefirst-partyinformation andsourceagreement, not formattedkeywordfiller.",
+    "not_measured": "NoactualAIOverview,ChatGPT,PerplexityorBingcitationtrackingwasrun. NoAIvisibilityscore claimed.",
+    "policy": "Google says ordinarySEO practices apply; no additionaltechnicalrequirements orspecialAItextfiles/schema needed. FAQs may help users butGoogleFAQrichresults were discontinuedfrom7May2026."
+  },
+  "limitations": [
+    "NoGBPadmin,GSC,GA4orGoogleAPIaccount access.",
+    "ProductionHTMLunavailabletothisauditor; conclusionsaboutpagecopyarelocal-only.",
+    "Publicwebsearchisnotgeo-pinnedSERPtracking; nosearchvolume,difficultyorpositionnumbersprovided.",
+    "Editorialcontentassessment,notGoogleE-E-A-Tscore; noarbitrarywordcounttargets.",
+    "Nofounder,halal,capacity,availability,priceorsocialidentityclaimsinferredfromsearchsnippets.",
+    "Noexternalprofilesedited,nomessagessentandnoreviewscollected."
+  ],
+  "sources": {
+    "L1": {
+      "url": "/Users/rl/Projects/orkidriaseafood/CONTENT_SOURCES.md",
+      "type": "localresearchledger"
+    },
+    "S1": {
+      "url": "https://www.sluurpy.com/en/pantai-cenang/restaurant/4688321/orkid-ria-seafood-restaurant",
+      "finding": "OldLot1225/Cenangphoneandhoursremainonlistinglabelledupdated5June2025; snapshot3October2026."
+    },
+    "S2": {
+      "url": "https://www.petitfute.com/v38125-pantai-cenang-pantai-tengah/c1165-restaurants/c1248-specialites/c116-restaurant-fruits-de-mer-poissons/1634874-orkid-ria-seafood.html",
+      "finding": "Old+6049554128andsplithours."
+    },
+    "S3": {
+      "url": "https://tripmoo.net/en-malaysia-langkawi-orkid-ria-seafood/",
+      "finding": "2026-labelledtravelarticlecontinuesCenanglocationadvice."
+    },
+    "S4": {
+      "url": "https://wanderlog.com/place/details/838500/orkid-ria-seafood-restaurant",
+      "finding": "CurrentLot418/phone/hoursbutdescriptionstillCenang; mixedentityhistory. Reviewratingsnotcopiedorvalidated."
+    },
+    "S5": {
+      "url": "https://langkawi.app/business/orkid-ria-seafood-restaurant",
+      "finding": "CurrentLot418/Tengah/+60176144128/daily13–23; capacity/preparationsremainsecondaryclaims,notapprovedfirst-partyfacts."
+    },
+    "S6": {
+      "url": "https://www.tripadvisor.com.br/Restaurant_Review-g26498275-d32829545-Reviews-Orkid_Ria_Seafood_Restaurant-Kedawang_Langkawi_District_Kedah.html",
+      "finding": "Currentaddress/phone/hours; localizedpublicsnapshotlabelslistingunclaimed. Accountownershipstatusmustbeconfirmedbyowner."
+    },
+    "S7": {
+      "url": "https://telagaseafood.my/reserve",
+      "finding": "Competitorfirst-partypageprovidescurrentmenu-stylepreparations,prices/units,weightsandtable-requestworkflow. Showsinformationdepth,notaclaimaboutrelativeGoogleposition."
+    },
+    "S8": {
+      "url": "https://lancava.com.my/",
+      "finding": "Restaurantfirst-partysitewithmenuandlocationaction; relevantPantaiTengahcomparison."
+    },
+    "S9": {
+      "url": "https://www.tripadvisor.com/Restaurants-g2053325-c33-Pantai_Tengah_Langkawi_Langkawi_District_Kedah.html",
+      "finding": "Categorycomparisonpagerepresentsexploratorybest-seafoodintent; donotclaimrankposition."
+    },
+    "G1": {
+      "url": "https://support.google.com/business/answer/7091",
+      "finding": "Officiallocalrankingguidance: completeaccurateprofiles; relevance,distance,prominence; verification,reviewsandphotos."
+    },
+    "G2": {
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "finding": "OrdinarySEOandindex/snippeteligibilityapply; nospecialAIfileorschemarequired."
+    },
+    "G3": {
+      "url": "https://support.google.com/contributionpolicy/answer/7400114",
+      "finding": "No incentivized/manipulated orselectivelypositive reviews; genuineuninfluencedfeedbackallowed."
+    },
+    "G4": {
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+      "finding": "LocalBusinessreviewrichresultsapplytositesreviewingotherbusinesses; ownbusinessself-servingreviewsnoteligiblestarstrategy."
+    },
+    "G5": {
+      "url": "https://developers.google.com/search/updates",
+      "finding": "May8,2026entrysaysFAQrichresultdiscontinuedfromMay7; June15entryremovesdocs. Do notpromiseFAQrichresults."
+    },
+    "G6": {
+      "url": "https://support.google.com/business/answer/3038177",
+      "finding": "Useaccuratereal-worldbusinessidentityandavoidkeywordstuffing."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "broken": [],
+    "h1": "Choose Your Seafood.Make It Your Meal.",
+    "missingAlt": 0,
+    "overflow": false,
+    "url": "/menu/",
+    "width": 390
+  },
+  {
+    "broken": [],
+    "h1": "Langkawi Roots.A Place to Gather.",
+    "missingAlt": 0,
+    "overflow": false,
+    "url": "/about/",
+    "width": 390
+  },
+  {
+    "broken": [],
+    "h1": "Find Us inPantai Tengah.",
+    "missingAlt": 0,
+    "overflow": false,
+    "url": "/restaurant/",
+    "width": 390
+  },
+  {
+    "broken": [],
+    "h1": "Let’s PlanYour Table.",
+    "missingAlt": 0,
+    "overflow": false,
+    "url": "/reservation/",
+    "width": 390
+  }
+]

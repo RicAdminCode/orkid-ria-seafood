@@ -1,0 +1,376 @@
+{
+  "date": "2026-11-04",
+  "photos": 25,
+  "variants": 162,
+  "formats": [
+    "AVIF quality 60, 4:4:4 chroma",
+    "WebP quality 86 fallback"
+  ],
+  "widths": "480, 800, 1200, native (never upscaled; maximum 1600)",
+  "originalJPEGsUnchanged": true,
+  "likeForLikeBytes": {
+    "previousWebp": 7143636,
+    "newAvif": 6149238,
+    "saved": 994398,
+    "savedPercent": 13.9
+  },
+  "qualityCheck": {
+    "metric": "RGB PSNR against original JPEG, full native resolution; higher means lower encoding error",
+    "oldAverageDb": 37.95,
+    "newAverageDb": 39.34,
+    "all25Improved": true,
+    "limit": "PSNR is an encoding fidelity check, not proof of recovered photographic detail or a perceptual quality guarantee."
+  },
+  "photosDetail": [
+    {
+      "source": "assets/langkawi-app/orkid-ria5.jpg",
+      "originalWidth": 1015,
+      "originalHeight": 571,
+      "oldWebpBytes": 99122,
+      "avifBytes": 80679,
+      "oldWebpPSNR": 37.07,
+      "avifPSNR": 38.2
+    },
+    {
+      "source": "assets/langkawi-app/orkid-ria4.jpg",
+      "originalWidth": 1015,
+      "originalHeight": 571,
+      "oldWebpBytes": 82792,
+      "avifBytes": 72688,
+      "oldWebpPSNR": 37.45,
+      "avifPSNR": 38.55
+    },
+    {
+      "source": "assets/langkawi-app/orkid-ria3.jpg",
+      "originalWidth": 1015,
+      "originalHeight": 571,
+      "oldWebpBytes": 79654,
+      "avifBytes": 67875,
+      "oldWebpPSNR": 38.02,
+      "avifPSNR": 38.82
+    },
+    {
+      "source": "assets/langkawi-app/orkid-ria2.jpg",
+      "originalWidth": 1015,
+      "originalHeight": 571,
+      "oldWebpBytes": 75028,
+      "avifBytes": 65019,
+      "oldWebpPSNR": 38.11,
+      "avifPSNR": 39.0
+    },
+    {
+      "source": "assets/langkawi-app/orkid-ria1.jpg",
+      "originalWidth": 1015,
+      "originalHeight": 571,
+      "oldWebpBytes": 71456,
+      "avifBytes": 58400,
+      "oldWebpPSNR": 38.2,
+      "avifPSNR": 38.99
+    },
+    {
+      "source": "assets/gallery/32-40-c3-00.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 161412,
+      "avifBytes": 146194,
+      "oldWebpPSNR": 38.13,
+      "avifPSNR": 40.06
+    },
+    {
+      "source": "assets/gallery/32-23-a9-39.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 158280,
+      "avifBytes": 128989,
+      "oldWebpPSNR": 38.24,
+      "avifPSNR": 39.53
+    },
+    {
+      "source": "assets/gallery/32-5c-64-aa.jpg",
+      "originalWidth": 1120,
+      "originalHeight": 840,
+      "oldWebpBytes": 156280,
+      "avifBytes": 131314,
+      "oldWebpPSNR": 37.73,
+      "avifPSNR": 39.82
+    },
+    {
+      "source": "assets/gallery/32-5c-64-ab.jpg",
+      "originalWidth": 840,
+      "originalHeight": 1000,
+      "oldWebpBytes": 110990,
+      "avifBytes": 89834,
+      "oldWebpPSNR": 38.45,
+      "avifPSNR": 39.85
+    },
+    {
+      "source": "assets/gallery/32-5c-64-ac.jpg",
+      "originalWidth": 840,
+      "originalHeight": 1000,
+      "oldWebpBytes": 104984,
+      "avifBytes": 87333,
+      "oldWebpPSNR": 38.38,
+      "avifPSNR": 40.13
+    },
+    {
+      "source": "assets/gallery/32-5c-64-af.jpg",
+      "originalWidth": 840,
+      "originalHeight": 1000,
+      "oldWebpBytes": 154096,
+      "avifBytes": 122154,
+      "oldWebpPSNR": 37.94,
+      "avifPSNR": 38.91
+    },
+    {
+      "source": "assets/gallery/32-5c-64-ad.jpg",
+      "originalWidth": 1120,
+      "originalHeight": 840,
+      "oldWebpBytes": 207080,
+      "avifBytes": 167770,
+      "oldWebpPSNR": 37.12,
+      "avifPSNR": 39.09
+    },
+    {
+      "source": "assets/gallery/32-5c-64-ae.jpg",
+      "originalWidth": 840,
+      "originalHeight": 1000,
+      "oldWebpBytes": 129638,
+      "avifBytes": 111379,
+      "oldWebpPSNR": 37.57,
+      "avifPSNR": 39.26
+    },
+    {
+      "source": "assets/gallery/32-40-c2-fd.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 184634,
+      "avifBytes": 147748,
+      "oldWebpPSNR": 38.29,
+      "avifPSNR": 39.79
+    },
+    {
+      "source": "assets/gallery/32-40-c2-fe.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 163686,
+      "avifBytes": 141232,
+      "oldWebpPSNR": 38.12,
+      "avifPSNR": 39.87
+    },
+    {
+      "source": "assets/gallery/32-40-c2-ff.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 271600,
+      "avifBytes": 237403,
+      "oldWebpPSNR": 37.14,
+      "avifPSNR": 38.78
+    },
+    {
+      "source": "assets/gallery/32-40-c2-fb.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 136180,
+      "avifBytes": 112846,
+      "oldWebpPSNR": 38.63,
+      "avifPSNR": 40.24
+    },
+    {
+      "source": "assets/gallery/32-40-c2-fc.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 89248,
+      "avifBytes": 69627,
+      "oldWebpPSNR": 39.93,
+      "avifPSNR": 40.63
+    },
+    {
+      "source": "assets/gallery/32-40-c2-fa.jpg",
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "oldWebpBytes": 146162,
+      "avifBytes": 121225,
+      "oldWebpPSNR": 38.56,
+      "avifPSNR": 39.98
+    },
+    {
+      "source": "assets/2026/feb-08.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 352948,
+      "avifBytes": 309617,
+      "oldWebpPSNR": 36.76,
+      "avifPSNR": 38.16
+    },
+    {
+      "source": "assets/2026/feb-0b.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 352486,
+      "avifBytes": 311459,
+      "oldWebpPSNR": 36.58,
+      "avifPSNR": 38.13
+    },
+    {
+      "source": "assets/2026/feb-0c.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 251798,
+      "avifBytes": 222479,
+      "oldWebpPSNR": 37.26,
+      "avifPSNR": 39.03
+    },
+    {
+      "source": "assets/2026/feb-07.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 125098,
+      "avifBytes": 94990,
+      "oldWebpPSNR": 39.48,
+      "avifPSNR": 40.35
+    },
+    {
+      "source": "assets/2026/feb-0a.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 198182,
+      "avifBytes": 161469,
+      "oldWebpPSNR": 37.73,
+      "avifPSNR": 39.13
+    },
+    {
+      "source": "assets/2026/sep-janine.jpg",
+      "originalWidth": 1400,
+      "originalHeight": 1000,
+      "oldWebpBytes": 219036,
+      "avifBytes": 181228,
+      "oldWebpPSNR": 37.85,
+      "avifPSNR": 39.3
+    }
+  ],
+  "limits": [
+    "Original source resolution remains 840\u20131400px; five venue photos are 1015px wide.",
+    "No synthetic detail or venue/dish changes; no new photos or ownership metadata.",
+    "Download savings compare equal-resolution files, not measured real-world page speed."
+  ],
+  "browserChecks": {
+    "initial": {
+      "images": [
+        {
+          "path": "/assets/langkawi-app/orkid-ria2.avif",
+          "bytes": 65319
+        },
+        {
+          "path": "/assets/2026/feb-0c-800.avif",
+          "bytes": 96960
+        },
+        {
+          "path": "/assets/gallery/32-40-c2-fd-800.avif",
+          "bytes": 77137
+        },
+        {
+          "path": "/assets/gallery/32-40-c3-00-800.avif",
+          "bytes": 82312
+        }
+      ],
+      "hero": "http://localhost:3123/assets/langkawi-app/orkid-ria2.avif"
+    },
+    "results": [
+      {
+        "route": "/",
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "avif": 40,
+        "photos": 42
+      },
+      {
+        "route": "/menu/",
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "avif": 7,
+        "photos": 7
+      },
+      {
+        "route": "/about/",
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "avif": 5,
+        "photos": 5
+      },
+      {
+        "route": "/restaurant/",
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "avif": 24,
+        "photos": 24
+      },
+      {
+        "route": "/reservation/",
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "avif": 1,
+        "photos": 1
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "avif": 37,
+        "photos": 42
+      },
+      {
+        "route": "/menu/",
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "avif": 7,
+        "photos": 7
+      },
+      {
+        "route": "/about/",
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "avif": 5,
+        "photos": 5
+      },
+      {
+        "route": "/restaurant/",
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "avif": 24,
+        "photos": 24
+      },
+      {
+        "route": "/reservation/",
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "avif": 1,
+        "photos": 1
+      }
+    ],
+    "retina": {
+      "dpr": 2,
+      "currentSrc": "http://localhost:3123/assets/langkawi-app/orkid-ria2.avif",
+      "sizes": "(max-width: 760px) max(100vw, 699px), max(100vw, 177.758svh)"
+    },
+    "carousel": true
+  },
+  "encodingRecipe": "python3 scripts/optimize-images.py (Pillow with AVIF support)",
+  "finalChecks": {
+    "layoutPreserved": true,
+    "webpFallback": "http://localhost:3123/assets/langkawi-app/orkid-ria2.webp"
+  },
+  "tests": {
+    "fullSuitePassed": 40,
+    "finalAssetAndNavigationChecksPassed": 9
+  }
+}

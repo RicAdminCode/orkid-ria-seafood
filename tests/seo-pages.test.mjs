@@ -19,12 +19,12 @@ for(const slug of slugs)test(`SEO document and local assets: /${slug}`,()=>{
  assert.ok(document.querySelector('.business-address').textContent.includes('Lot 418'));
  for(const img of document.querySelectorAll("img")){
   assert.ok(img.hasAttribute('alt'));assert.ok(+img.width>0&&+img.height>0);
-  for(const path of [img.getAttribute('src'),...img.getAttribute('srcset').split(',').map(x=>x.trim().split(' ')[0])])assert.ok(existsSync(path.replace(/^\.\.\//,'')),path);
+  for(const path of [img.getAttribute('src'),...img.getAttribute('srcset').split(',').map(x=>x.trim().split(' ')[0])])assert.ok(existsSync(decodeURIComponent(path.replace(/^(\.\.\/|\/)/,''))),path);
  }
  for(const a of document.querySelectorAll('a[href]')){
   const url=new URL(a.getAttribute('href'),canonical);
   if(url.origin!==new URL(canonical).origin)continue;
-  const path=url.pathname;
+  const path=decodeURIComponent(url.pathname);
   assert.ok(existsSync(path.slice(1)+(path.endsWith('/')?'index.html':'')),path);
  }
  if(slug){assert.ok(document.querySelector('[aria-label=Breadcrumb]'));assert.ok(graph.some(x=>x['@type']==='BreadcrumbList'));}

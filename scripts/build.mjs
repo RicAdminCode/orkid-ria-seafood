@@ -9,15 +9,15 @@ for (const dir of ['about','menu','reservation','restaurant']) {
   await mkdir(`dist/${dir}`);
   await cp(`${dir}/index.html`, `dist/${dir}/index.html`);
 }
-async function images(dir) {
+async function media(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const path = `${dir}/${entry.name}`;
-    if (entry.isDirectory()) await images(path);
-    else if (/\.(jpg|jpeg|png|webp|avif|svg)$/i.test(entry.name)) {
+    if (entry.isDirectory()) await media(path);
+    else if (/\.(jpg|jpeg|png|webp|avif|svg|mp4)$/i.test(entry.name)) {
       await mkdir(`dist/${dir}`, { recursive: true });
       await cp(path, `dist/${path}`);
     }
   }
 }
-await images('assets');
+await media('assets');
 console.log('Built public assets in dist/');

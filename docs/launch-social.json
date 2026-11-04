@@ -1,0 +1,29 @@
+{
+  "status": "Drafts only; not published",
+  "official_instagram": "Awaiting owner confirmation",
+  "approval_needed": [
+    "Confirm rights for website and Instagram use of each photo",
+    "Confirm current hours, phone, WhatsApp and menu",
+    "Review captions before publishing"
+  ],
+  "posts": [
+    {
+      "theme": "Arriving at Orkid Ria",
+      "image": "assets/langkawi-app/orkid-ria1.jpg",
+      "caption": "A seafood evening in Pantai Tengah. Find Orkid Ria at Lot 418, Jalan Pantai Tengah, Langkawi. Open daily, 1:00 pm\u201311:00 pm. Get directions through the link in our bio.",
+      "action": "Use the website Visit page as the bio destination for this post."
+    },
+    {
+      "theme": "Choose your seafood",
+      "image": "assets/2026/feb-0b.jpg",
+      "caption": "Start at the tanks. Ask about today\u2019s seafood, choose your preparation, and confirm the weight and price before ordering. Call +60 17-614 4128 to plan your visit to Orkid Ria in Pantai Tengah.",
+      "action": "Call the restaurant."
+    },
+    {
+      "theme": "A meal together",
+      "image": "assets/langkawi-app/orkid-ria4.jpg",
+      "caption": "Good company. Seafood to share. Planning a meal at Orkid Ria in Pantai Tengah, Langkawi? WhatsApp +60 17-614 4128 with your date, time and number of guests to check availability.",
+      "action": "WhatsApp the restaurant; await confirmation."
+    }
+  ]
+}

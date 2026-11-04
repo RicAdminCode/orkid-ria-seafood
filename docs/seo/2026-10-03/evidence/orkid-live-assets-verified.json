@@ -1,0 +1,494 @@
+[
+  {
+    "url": "https://orkidriaseafood.com/app.js?v=261001.01-motion",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "text/javascript"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-07-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-07-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-07.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-08-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-08-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-08.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0a-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0a-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0a.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0b-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0b-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0b.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0c-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0c-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/feb-0c.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/sep-janine-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/sep-janine-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/2026/sep-janine.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/favicon.svg",
+    "status": 404,
+    "cache_control": null,
+    "content_type": null
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-23-a9-39-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-23-a9-39-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-23-a9-39.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fa-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fa-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fa.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fb-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fb-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fb.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fc-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fc-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fc.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fd-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fd-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fd.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fe-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fe-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-fe.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-ff-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-ff-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c2-ff.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c3-00-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c3-00-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-40-c3-00.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-aa-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-aa-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-aa.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ab-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ab-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ab.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ac-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ac-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ac.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ad-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ad-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ad.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ae-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ae-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-ae.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-af-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-af-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/gallery/32-5c-64-af.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria1-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria1-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria1.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.jpg",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/jpeg"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria2.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria3-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria3-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria3.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria4-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria4-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria4.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria5-480.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria5-800.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/assets/langkawi-app/orkid-ria5.webp",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "image/webp"
+  },
+  {
+    "url": "https://orkidriaseafood.com/reviews.css?v=261001.01",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "text/css"
+  },
+  {
+    "url": "https://orkidriaseafood.com/reviews.js?v=261001.01-hidden",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "text/javascript"
+  },
+  {
+    "url": "https://orkidriaseafood.com/styles.css?v=261001.01-align",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "text/css"
+  },
+  {
+    "url": "https://orkidriaseafood.com/styles.css?v=261001.01-seo",
+    "status": 200,
+    "cache_control": "public, max-age=0, must-revalidate",
+    "content_type": "text/css"
+  }
+]

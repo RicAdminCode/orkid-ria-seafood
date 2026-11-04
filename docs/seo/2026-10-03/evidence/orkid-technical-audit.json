@@ -1,0 +1,183 @@
+{
+  "audit_date": "2026-10-03",
+  "scope": "Read-only live HTTP/source audit and local repository comparison; no deployment or Google account access.",
+  "summary": "The five public canonical pages are accessible and structurally indexable. Main priorities are the failing www hostname, deploying prepared content, and preserving campaign attribution before PR outreach. Indexation/rankings/Core Web Vitals remain unverified.",
+  "findings": [
+    {
+      "id": "T01",
+      "priority": "P1",
+      "scope": "LIVE + configuration",
+      "title": "www hostname returns Cloudflare 522 instead of redirecting",
+      "evidence": {
+        "url": "https://www.orkidriaseafood.com/",
+        "status": 522,
+        "apex_status": 200,
+        "config": "wrangler.jsonc:30 only routes orkidriaseafood.com/*; server/worker.js:156 supports www when reached"
+      },
+      "impact": "Visitors and crawlers using www cannot reach the restaurant; external mentions may link to it.",
+      "fix": "Confirm proxied www DNS and add www route to the Worker or a Cloudflare redirect rule. Require a single 301 to the apex canonical URL, preserving the requested known page path and marketing parameters. Test HTTPS and HTTP www variants after deployment.",
+      "sources": [
+        "https://developers.cloudflare.com/workers/configuration/routing/routes/",
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ]
+    },
+    {
+      "id": "T02",
+      "priority": "P1",
+      "scope": "LIVE vs LOCAL",
+      "title": "Launch content, researched About page and photographic menu are not published",
+      "evidence": {
+        "live_about_title": "About Orkid Ria | Seafood Dining in Langkawi",
+        "local_about_title": "Our Story & Dining Experience | Orkid Ria Langkawi",
+        "live_about_images": 2,
+        "local_about_images": 5,
+        "live_about_main_words": 155,
+        "local_about_main_words": 417,
+        "live_menu_images": 1,
+        "local_menu_images": 7
+      },
+      "impact": "Search engines and journalists can only see the older content, not the improved local experience.",
+      "fix": "Finish factual/photo-rights checks, review and deploy the existing launch branch, then verify production titles, copy, assets and canonical URLs. Request recrawling in Search Console.",
+      "files": [
+        "about/index.html",
+        "menu/index.html",
+        "restaurant/index.html",
+        "reservation/index.html",
+        "index.html",
+        "styles.css",
+        "app.js"
+      ]
+    },
+    {
+      "id": "T03",
+      "priority": "P2",
+      "scope": "LIVE; fixed LOCAL by parent during audit",
+      "title": "Canonical redirect removes campaign tracking parameters",
+      "evidence": {
+        "url": "https://orkidriaseafood.com/?utm_source=audit",
+        "status": 301,
+        "location": "https://orkidriaseafood.com/",
+        "file": "server/worker.js:160"
+      },
+      "impact": "PR, social and advertising campaign URLs lose attribution before client analytics can record it. No analytics code is installed yet.",
+      "fix": "Keep known marketing parameters (utm_*, gclid and other chosen click IDs) on the visitor URL and preserve them through host/path redirects. Retain clean rel=canonical. Remove only intentional preview/development parameters. Add regression checks for campaign URLs.",
+      "sources": [
+        "https://support.google.com/analytics/answer/10917952",
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      "status": "Fixed locally, pending deployment",
+      "local_fix": "Parent reports canonicalRedirect now preserves campaign/repeated query parameters and removes only release/alignment/font/story preview parameters; added 2 regression tests. All 40 tests passed in parent run. Live still strips UTM."
+    },
+    {
+      "id": "T04",
+      "priority": "P2",
+      "scope": "Measurement",
+      "title": "Search visibility and conversion baseline is unverified",
+      "evidence": "No gtag/GTM/custom conversion implementation found in HTML/app.js; this audit has no verified Search Console/GA4/CrUX access. Root agent PSI request returned quota 429.",
+      "fix": "Verify a Search Console domain property, submit the existing sitemap, inspect the five URLs, and define call, WhatsApp and directions click events in the chosen privacy-appropriate analytics setup. Record mobile field CWV when available; do not substitute file sizes or a mocked test for field data.",
+      "sources": [
+        "https://developers.google.com/search/docs/appearance/core-web-vitals"
+      ]
+    },
+    {
+      "id": "T05",
+      "priority": "P3",
+      "scope": "LIVE + LOCAL security hardening",
+      "title": "Public asset responses lack basic security headers",
+      "evidence": "All five HTML 200 responses lack CSP, HSTS, X-Content-Type-Options, X-Frame-Options and Referrer-Policy. API/admin responses have dedicated headers. Public path returns ASSETS.fetch directly at server/worker.js:170.",
+      "fix": "Add tested public headers without breaking Google Fonts, JSON-LD, images or the Google map iframe. Start with nosniff, a referrer policy and frame protection; test CSP in report-only before enforcement. HSTS should follow verified HTTPS hostname coverage. This is resilience/trust hygiene, not a guaranteed ranking boost."
+    },
+    {
+      "id": "T06",
+      "priority": "P3",
+      "scope": "LIVE + LOCAL UX",
+      "title": "Unknown URLs return correct but blank 404",
+      "evidence": {
+        "url": "https://orkidriaseafood.com/not-a-real-audit-page/",
+        "status": 404,
+        "bytes": 0,
+        "local_template": "404.html exists"
+      },
+      "fix": "Configure Worker static assets not_found_handling as 404-page (verify current Cloudflare setting), retaining a real 404 and noindex while showing the branded recovery page."
+    },
+    {
+      "id": "T07",
+      "priority": "P3",
+      "scope": "Schema enrichment opportunity",
+      "title": "Required Restaurant identity is present; verified geo and current menu details can strengthen completeness",
+      "evidence": "Consistent Restaurant @id, name, address, phone, hours, image, hasMap, hasMenu and sameAs on all five pages. Local adds Google-documented menu property; live does not yet. No verified geo or priceRange.",
+      "fix": "Publish local schema with the launch changes. Add exact coordinates only after validating the current Google pin; add priceRange only from an owner-approved current menu. Do not invent ratings, prices or an Offer. Do not add self-serving aggregateRating expecting review stars.",
+      "sources": [
+        "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+        "https://developers.google.com/search/docs/appearance/structured-data/review-snippet"
+      ]
+    }
+  ],
+  "passed_checks": [
+    "Five sitemap URLs each return HTTP 200 over HTTPS with a unique title, unique description, one H1 and one self-referencing canonical in raw HTML.",
+    "robots.txt is HTTP 200, permits public crawling, excludes admin/API and links the sitemap.",
+    "sitemap.xml is valid XML with exactly the five HTTPS canonical pages; no redirected, noindexed or missing public pages. Omission of lastmod is acceptable; do not invent dates.",
+    "HTTP apex, /menu without slash, /index.html, /about/index.html and workers.dev homepage redirect 301 to the appropriate canonical target.",
+    "All page links from the five live documents resolve to the known canonical pages; same-page fragment targets exist. Every main public page is one navigation click from home.",
+    "Live JSON-LD parses on every page and shared Restaurant data is internally consistent; WebSite/WebPage, AboutPage/ContactPage and breadcrumbs are present as appropriate. This is source validation, not a completed Google Rich Results Test.",
+    "No invented AggregateRating/Review markup; no noindex on canonical pages; core content and metadata do not require JavaScript.",
+    "81 resources referenced by current live HTML return HTTP 200 using a browser-style User-Agent, including CSS/JS, image src/srcset and OG image. New local favicon is not live (404) and is not linked by old live HTML.",
+    "All local image references exist, all images have alt attributes and explicit dimensions, and responsive WebP srcsets are present. Decorative linked-card images correctly have empty alt alongside accessible link names.",
+    "Unauthenticated /admin/reviews returns 401 and no-store with security headers. Build uses explicit public-file allowlist excluding server files, configuration and docs."
+  ],
+  "limitations": [
+    "No ranking positions, search volumes, indexed-page counts or field CWV are inferred.",
+    "Default Python User-Agent produced 403 responses for assets; browser-style UA rerun returned 200 for every referenced resource. This alone does not establish a verified Googlebot block. Check Search Console live URL inspection and Cloudflare firewall logs.",
+    "No browser/mobile interaction checks performed by this specialist; parent owns that verification.",
+    "Current business address/hours/phone are consistent across website/schema, but real-world owner verification is separate.",
+    "Raw source text word counts are descriptive only. There is no minimum-word-count ranking requirement."
+  ],
+  "evidence_files": [
+    "/tmp/orkid-http-audit.json",
+    "/tmp/orkid-local-audit.json",
+    "/tmp/orkid-live-assets-verified.json"
+  ],
+  "live_pages": [
+    {
+      "url": "https://orkidriaseafood.com/",
+      "status": 200,
+      "title": "Orkid Ria Seafood Restaurant | Pantai Tengah, Langkawi",
+      "images": 16,
+      "main_words": 67
+    },
+    {
+      "url": "https://orkidriaseafood.com/menu/",
+      "status": 200,
+      "title": "Seafood Menu Highlights | Orkid Ria Langkawi",
+      "images": 1,
+      "main_words": 154
+    },
+    {
+      "url": "https://orkidriaseafood.com/about/",
+      "status": 200,
+      "title": "About Orkid Ria | Seafood Dining in Langkawi",
+      "images": 2,
+      "main_words": 155
+    },
+    {
+      "url": "https://orkidriaseafood.com/restaurant/",
+      "status": 200,
+      "title": "Location & Opening Hours | Orkid Ria Langkawi",
+      "images": 26,
+      "main_words": 271
+    },
+    {
+      "url": "https://orkidriaseafood.com/reservation/",
+      "status": 200,
+      "title": "Table Reservations & Contact | Orkid Ria Langkawi",
+      "images": 1,
+      "main_words": 123
+    }
+  ],
+  "counts": {
+    "public_pages_checked": 5,
+    "all_http_routes_checked": 16,
+    "referenced_live_resources_passed": 81,
+    "local_missing_assets": 0
+  }
+}

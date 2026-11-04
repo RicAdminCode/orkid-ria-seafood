@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-04",
+  "checks": [
+    {
+      "width": 1543,
+      "hero": 590.3984375,
+      "overflow": false,
+      "broken": [],
+      "arrows": true,
+      "keyboard": true,
+      "loopBothDirections": true
+    },
+    {
+      "width": 1305,
+      "hero": 590.3984375,
+      "overflow": false,
+      "broken": [],
+      "arrows": true,
+      "keyboard": true,
+      "loopBothDirections": true
+    },
+    {
+      "width": 390,
+      "hero": 506.3984375,
+      "overflow": false,
+      "broken": [],
+      "arrows": true,
+      "keyboard": true,
+      "loopBothDirections": true
+    }
+  ],
+  "existingTestsPassed": 40,
+  "scope": "Compact hero and CruiseOS-inspired seafood carousel; browser emulation only."
+}

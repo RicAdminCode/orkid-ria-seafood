@@ -1,0 +1,418 @@
+{
+  "audit_date": "2026-10-03",
+  "scope": "Keyword and PR research only; read-only site inspection; no outreach, publishing or account changes.",
+  "method": {
+    "queries": [
+      "seafood restaurant Langkawi Pantai Tengah",
+      "Orkid Ria menu Langkawi history restaurant",
+      "Langkawi seafood restaurant family seafood price choose live tanks",
+      "Langkawi seafood restaurant official menu Telaga Unkaizan Fish Farm",
+      "Orkid Ria opening hours location",
+      "Orkid Ria menu price",
+      "Pantai Tengah seafood restaurant reservation",
+      "restoran makanan laut Pantai Tengah"
+    ],
+    "limitations": "Live web-search snapshots, not a Google geo-localized rank tracker or complete SERP export. No Search Console, keyword-volume, backlink or conversion account data was available. No invented volume, difficulty, ranking positions or ROI forecasts. Keyword priorities below are editorial judgments based on intent, locality, existing business evidence and observed result types."
+  },
+  "executive_findings": [
+    {
+      "priority": "P1",
+      "finding": "Answer menu and price intent with an owner-approved current HTML menu. Photo highlights do not answer dish names, preparations, prices, weight units, fees or portion-size questions.",
+      "evidence": [
+        "https://telagaseafood.my/menu",
+        "https://telagaseafood.my/reserve",
+        "https://unkaizan.com/en/grill/"
+      ],
+      "recommendation": "Publish confirmed menu categories and dishes as text, with prices or honest market-price guidance, units, currentness date and stock/fee details supplied by the owner. Optional PDF complements HTML; it must not replace it."
+    },
+    {
+      "priority": "P1",
+      "finding": "Resolve old-location confusion before chasing broad discovery terms. Search returns old Cenang addresses, landlines, hours and images alongside current Pantai Tengah information.",
+      "evidence": [
+        "https://www.langkawi-insight.com/langkawi_000112.htm",
+        "https://www.alamandavillaslangkawi.com/where-to-eat-langkawi",
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "recommendation": "Use one current address/phone/hours block everywhere; add a concise old-location answer to Visit. After owner confirmation, request corrections on existing relevant listings. Keep historical citations clearly dated."
+    },
+    {
+      "priority": "P2",
+      "finding": "The defensible differentiation is specific: Pantai Tengah, live seafood selection, shared meals, water-feature setting and documented Langkawi history. Broad best-restaurant superlatives are neither distinctive evidence nor a useful content strategy.",
+      "evidence": [
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant",
+        "https://naturallylangkawi.my/wp-content/uploads/pdf/Bits_n_Eats_of_Langkawi.pdf",
+        "https://www.thenationalnews.com/travel/2025/01/30/malyasia-langkawi-new-hotels-experiences-things-to-do/"
+      ],
+      "recommendation": "Build these into useful visitor answers and original photography. No best/number-one guarantees, unverified halal targets or false beachfront claims."
+    },
+    {
+      "priority": "P2",
+      "finding": "Earned editorial needs new reporting material. A 2024/2025 reopening is not new launch news in October 2026.",
+      "evidence": [
+        "https://www.thenationalnews.com/travel/2025/01/30/malyasia-langkawi-new-hotels-experiences-things-to-do/"
+      ],
+      "recommendation": "Use a factual evergreen backgrounder now; prepare an interview, licensed historical images and an owner-verified menu/process demonstration to give editors a fresh reason to cover the restaurant."
+    }
+  ],
+  "competitor_observations": [
+    {
+      "name": "Telaga Seafood",
+      "urls": [
+        "https://telagaseafood.my/menu",
+        "https://telagaseafood.my/reserve"
+      ],
+      "observed": "Menu page includes an update date and downloadable menu. Reservation page exposes text dish descriptions, preparation choices, per-100g pricing, minimum weights and family/couple sets.",
+      "lesson": "Reduce visitor uncertainty with verified menu detail and portions; do not copy competitor prices or service promises.",
+      "ranking_claim": null
+    },
+    {
+      "name": "Unkaizan",
+      "urls": [
+        "https://unkaizan.com/en/grill/"
+      ],
+      "observed": "Dedicated menu-category page lists named dishes, cooking methods and location/hours, with a seasonal availability caveat.",
+      "lesson": "Publish comprehensible preparation descriptions within a coherent menu, without generating thin pages for every keyword variation.",
+      "ranking_claim": null
+    },
+    {
+      "name": "Tripadvisor area listings",
+      "urls": [
+        "https://www.tripadvisor.com/Restaurants-g2053325-c33-Pantai_Tengah_Langkawi_Langkawi_District_Kedah.html"
+      ],
+      "observed": "Broad local seafood discovery returns comparison/category results, including Unkaizan, May Hiang and Yam Yam.",
+      "lesson": "A single restaurant should make its own offering and visitor suitability clear, while maintaining correct third-party listings. It need not pretend to be an independent best-restaurants directory.",
+      "ranking_claim": null
+    },
+    {
+      "name": "Langkawi App current Orkid Ria listing",
+      "urls": [
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "observed": "A directory currently answers practical visitor questions in more detail than parts of the owned website. Some operational assertions are not owner-confirmed.",
+      "lesson": "Owned factual answers should become the authoritative visitor reference; confirm operations before borrowing claims such as parking, group rooms, pork-free status or capacity.",
+      "ranking_claim": null
+    }
+  ],
+  "keyword_page_map": [
+    {
+      "url": "/",
+      "priority": 1,
+      "intent": "Local discovery and brand navigation",
+      "primary": "seafood restaurant Langkawi",
+      "secondary": [
+        "Orkid Ria Seafood Restaurant",
+        "seafood restaurant Pantai Tengah",
+        "Orkid Ria Langkawi"
+      ],
+      "content_action": "Keep a clear location-and-category title and visible introductory description. Explain selection, shared dining and current location in natural language; link to menu, Visit and reservations.",
+      "avoid": "Trying to make every page target the broad primary term or publishing unsupported best/cheapest claims."
+    },
+    {
+      "url": "/menu/",
+      "priority": 1,
+      "intent": "Evaluate food, preparations, cost and availability",
+      "primary": "Orkid Ria menu",
+      "secondary": [
+        "Orkid Ria menu prices",
+        "Orkid Ria seafood menu",
+        "Langkawi live seafood menu"
+      ],
+      "content_action": "Replace the information gap with an owner-approved text menu and dated prices/units or market-price policy; add what is included, common preparations, portions, dietary enquiry procedure and a booking link. Retain highlights as photos, clearly labelled.",
+      "avoid": "Inventing prices, turning photographed dishes into confirmed current stock, or targeting halal until certification is verified."
+    },
+    {
+      "url": "/restaurant/",
+      "priority": 1,
+      "intent": "Find current address, hours and directions",
+      "primary": "Orkid Ria location",
+      "secondary": [
+        "Orkid Ria opening hours",
+        "Orkid Ria Pantai Tengah",
+        "Orkid Ria new location",
+        "Orkid Ria directions"
+      ],
+      "content_action": "Add a short answer explaining that the current restaurant is Lot 418, Pantai Tengah, while older articles refer to Pantai Cenang. Confirm postcode, holiday hours, parking, accessible entrance and arrival landmarks with owner; provide an accurate map pin.",
+      "avoid": "Unverified travel-minute estimates, separate doorway pages for Cenang/Kuah/hotels, or falsely describing present venue as beachfront."
+    },
+    {
+      "url": "/reservation/",
+      "priority": 2,
+      "intent": "Contact and arrange a visit",
+      "primary": "Orkid Ria reservation",
+      "secondary": [
+        "Orkid Ria phone number",
+        "Orkid Ria WhatsApp",
+        "Orkid Ria group booking"
+      ],
+      "content_action": "Keep phone and WhatsApp actions clear. Explain details to send, confirmation process and group requirements; only add deposit/cancellation/private-room rules when approved.",
+      "avoid": "Claiming instant availability or confirmed booking when link only opens a chat."
+    },
+    {
+      "url": "/about/",
+      "priority": 2,
+      "intent": "Brand history and confidence in dining experience",
+      "primary": "Orkid Ria history",
+      "secondary": [
+        "Orkid Ria story",
+        "Orkid Ria Pantai Cenang history",
+        "Orkid Ria dining experience"
+      ],
+      "content_action": "Retain attributed timeline and current-vs-historic distinction. Add an original owner interview, named team/chef information and licensed archival images when verified.",
+      "avoid": "Invented founder biography, uninterrupted since-1989 claim, or incorrectly calling January 2025 the exact reopening date."
+    }
+  ],
+  "secondary_language_opportunities": {
+    "status": "Hypotheses, not validated demand estimates",
+    "candidates": [
+      "restoran makanan laut Langkawi",
+      "makanan laut Pantai Tengah",
+      "兰卡威海鲜餐厅"
+    ],
+    "conditions": "Prioritize accurate core English pages first. Use Search Console country/query data and actual guest-language needs before translating. If useful, commission complete human-reviewed Bahasa Malaysia/Chinese versions with matching content and hreflang; confirm the official Chinese brand name. Do not sprinkle disconnected keyword translations into English copy."
+  },
+  "useful_content_backlog": [
+    {
+      "priority": 1,
+      "working_title": "How to order seafood at Orkid Ria",
+      "placement": "Expand /menu/ rather than create a competing page",
+      "sections": [
+        "What is available today",
+        "Choosing a size and preparation",
+        "How weight and quoted price work",
+        "Confirming total cost before cooking",
+        "Sharing with your group",
+        "Dietary questions to ask"
+      ],
+      "owner_input": [
+        "Current menu",
+        "Actual pricing basis/units",
+        "Taxes/service charges",
+        "Preparation choices",
+        "Allergen process"
+      ],
+      "asset": "Original licensed photo sequence showing selection, weighing, agreed order and finished shared table"
+    },
+    {
+      "priority": 1,
+      "working_title": "Finding Orkid Ria in Pantai Tengah",
+      "placement": "/restaurant/ FAQ and directions",
+      "sections": [
+        "Current address versus historical Cenang address",
+        "Verified map pin and entrance photograph",
+        "Transport and parking facts",
+        "Step-free access and seating facts",
+        "Current hours and holiday changes"
+      ],
+      "owner_input": [
+        "Postcode",
+        "GPS/entrance pin",
+        "Parking and access details",
+        "Holiday hours"
+      ],
+      "asset": "Owner-created entrance photograph with map link"
+    },
+    {
+      "priority": 2,
+      "working_title": "Planning a seafood meal for your group",
+      "placement": "/reservation/",
+      "sections": [
+        "Information to send",
+        "How confirmation works",
+        "Dietary and seating requests",
+        "Menu planning for mixed tastes"
+      ],
+      "owner_input": [
+        "Real group capacity",
+        "Private-room availability",
+        "Booking/deposit/cancellation policies"
+      ],
+      "asset": "Licensed real group-table photograph without identifiable guests unless consented"
+    },
+    {
+      "priority": 3,
+      "working_title": "The people and memories behind Orkid Ria",
+      "placement": "Extend /about/ after interview",
+      "sections": [
+        "Verified names and roles",
+        "Early records",
+        "What changed in the move",
+        "What guests should know today"
+      ],
+      "owner_input": [
+        "Recorded interview approval",
+        "Founding documents",
+        "Reopening date",
+        "Current ownership relationship",
+        "Archival photo rights"
+      ],
+      "asset": "Owner portrait and dated archive material"
+    },
+    {
+      "priority": 3,
+      "working_title": "A seasonal dish, explained by the kitchen",
+      "placement": "Only create a journal if the team can maintain it",
+      "sections": [
+        "Exact dish name",
+        "Preparation and flavour",
+        "Current availability",
+        "Original kitchen voice",
+        "Useful menu link"
+      ],
+      "owner_input": [
+        "Chef identity and approved quote",
+        "Current recipe facts",
+        "Right to publish footage"
+      ],
+      "asset": "Original short preparation film; no scraped or unlicensed food imagery"
+    }
+  ],
+  "pr_pack": {
+    "status": "Drafts for owner verification; unsent. Backgrounder is evergreen reference copy, not a new-opening announcement. Use web links only after confirming deployed pages are correct and accessible.",
+    "backgrounder": "Orkid Ria: Langkawi roots, a Pantai Tengah table\n\nOrkid Ria Seafood Restaurant brings people together over seafood at Lot 418 in Pantai Tengah, Langkawi. Its current setting includes indoor and outdoor dining spaces beside a water feature, with live seafood tanks forming part of the dining experience.\n\nThe name has a longer connection with the island. Naturally Langkawi’s Bits & Eats tourism guide records an establishment in Pantai Cenang in 1989 and a rebuild after a fire in 2004. These are attributed historical milestones rather than a claim of uninterrupted trading. In January 2025, The National reported Orkid Ria’s return in Pantai Tengah after a closure of more than four years. That article records the return; it does not establish the precise reopening date.\n\nAt today’s restaurant, guests can begin by discussing the available seafood and cooking options with the team. Weight, preparation and price should be confirmed before ordering. The idea is a meal built around the people at the table: seafood selected together, dishes shared, and time to enjoy the setting.\n\nFor visitors who remember Orkid Ria in Pantai Cenang, the current Pantai Tengah address is an important distinction. Older travel stories still describe the previous premises. Guests should use the current map pin when planning their journey rather than rely on directions in historical guides.\n\nThe restaurant’s published contact number is +60 17-614 4128, and current listings show daily hours of 1 pm to 11 pm. Guests planning a group meal should contact the restaurant with their preferred date, time and party size, and wait for confirmation of their arrangements. Specific seafood availability, dietary requirements and seating preferences are best discussed directly with the team before a visit.\n\nFor current visitor information, menu highlights and contact details, visit orkidriaseafood.com. Historical background and present-day dining information should be read separately: the restaurant’s past informs its story, while today’s team can confirm what is available for each visit.",
+    "backgrounder_word_count": 319,
+    "boilerplate": "Orkid Ria Seafood Restaurant is located in Pantai Tengah, Langkawi, with indoor and outdoor dining spaces beside a water feature. Guests can discuss available seafood, cooking options, weight and price with the team before ordering. Naturally Langkawi’s tourism guide traces the name to Pantai Cenang in 1989; The National reported its Pantai Tengah return in January 2025. Current listings show daily opening hours of 1 pm to 11 pm. For group enquiries, contact +60 17-614 4128 with your preferred date, time and number of guests. Find visitor information and menu highlights at orkidriaseafood.com. Arrangements and availability require direct confirmation.",
+    "boilerplate_word_count": 99,
+    "source_notes": {
+      "history": [
+        "https://naturallylangkawi.my/wp-content/uploads/pdf/Bits_n_Eats_of_Langkawi.pdf",
+        "https://www.thenationalnews.com/travel/2025/01/30/malyasia-langkawi-new-hotels-experiences-things-to-do/"
+      ],
+      "current_details": [
+        "https://langkawi.app/business/orkid-ria-seafood-restaurant"
+      ],
+      "limitations": "Attributed history is supported by the cited guide/article. Current phone/hours/address have directory corroboration but need owner sign-off. No owner quote, award, sustainability/local-catch claim or current halal status is asserted."
+    },
+    "story_hooks": [
+      {
+        "hook": "From Pantai Cenang memories to Pantai Tengah today",
+        "why_it_may_interest": "A long-running island name and a documented change of setting; useful to returning visitors.",
+        "needed_before_pitch": "Named spokesperson, owner-confirmed continuity/reopening chronology, rights-cleared archival and current photographs."
+      },
+      {
+        "hook": "What first-time visitors should know when choosing live seafood",
+        "why_it_may_interest": "A practical service story explaining selection, weight, price agreement and sharing.",
+        "needed_before_pitch": "Current menu, demonstrable pricing process, fee transparency, kitchen interview and original visual walkthrough."
+      },
+      {
+        "hook": "A seafood table beyond the old Cenang address",
+        "why_it_may_interest": "Corrects a real travel-planning confusion without pretending the move just happened.",
+        "needed_before_pitch": "Final address/map confirmation and accessible arrival details."
+      }
+    ],
+    "pitch_emails": [
+      {
+        "subject": "Story idea: Orkid Ria’s Langkawi history and its Pantai Tengah chapter",
+        "to_candidate": "The Star Lifestyle / Travel",
+        "to_verified": "lifestyle@thestar.com.my",
+        "contact_source": "https://www.thestar.com.my/contactus/",
+        "body": "Hello Lifestyle team,\n\nI’m [name and role] from Orkid Ria Seafood Restaurant in Langkawi. I’d like to suggest a reported feature about a familiar island restaurant name and its current Pantai Tengah setting.\n\nNaturally Langkawi’s tourism guide records a Pantai Cenang establishment in 1989 and a 2004 rebuild. The National reported the restaurant’s return in Pantai Tengah in January 2025. The useful story today is how guests experience the restaurant now, alongside a carefully sourced account of its past—not a new-opening announcement.\n\nWould this suit a Langkawi food or travel feature? If there is interest, I can discuss arranging a spokesperson interview and provide the verified background information available to us.\n\nBackground and visitor details: https://orkidriaseafood.com/about/\n\nThank you,\n[name, role, business contact]",
+        "pre_send_conditions": [
+          "Replace sender placeholders with an authorized representative",
+          "Secure an actual spokesperson before promising a date",
+          "Confirm deployed About page matches sourced draft",
+          "Do not promise coverage, positive review or a backlink"
+        ]
+      },
+      {
+        "subject": "Langkawi service-story idea: choosing a shared seafood meal at Orkid Ria",
+        "to_candidate": "Langkawi App editorial team",
+        "to_verified": "hello@langkawi.app",
+        "contact_source": "https://langkawi.app/",
+        "body": "Hello Langkawi App team,\n\nI’m [name and role] from Orkid Ria Seafood Restaurant. Thank you for maintaining your Orkid Ria listing. I’d like to suggest a practical visitor story about choosing seafood, agreeing weight and price, and planning dishes for a shared table.\n\nOur restaurant is at Lot 418 in Pantai Tengah. Some older travel pages still direct visitors to the former Pantai Cenang premises, so current arrival information would also be useful.\n\nWould this fit your independent field-guide coverage? We can discuss the factual information you would need and an appropriate time to speak with the team. Any visit or editorial assessment would remain entirely at your discretion.\n\nVisitor information: https://orkidriaseafood.com/restaurant/\n\nBest wishes,\n[name, role, business contact]",
+        "pre_send_conditions": [
+          "Confirm menu/process and map details first",
+          "Use an authorized sender",
+          "Supply only images with explicit reuse rights",
+          "No requirement for favorable coverage or a followed link"
+        ]
+      }
+    ],
+    "distribution_candidates": [
+      {
+        "name": "The Star Lifestyle / Travel",
+        "route": "lifestyle@thestar.com.my (Features Central); contact page also lists a Travel editor",
+        "source": "https://www.thestar.com.my/contactus/",
+        "fit": "Malaysia food, travel and people stories; send a tailored history/interview pitch.",
+        "caveat": "Editorial discretion; no promise of publication. Advertising is a separate route."
+      },
+      {
+        "name": "The National Travel",
+        "route": "newstips@thenationalnews.com or general inquiry routing shown on contact page",
+        "source": "https://www.thenationalnews.com/contact-us/",
+        "fit": "Its January 2025 Langkawi reporting already mentioned Orkid Ria. Pitch a substantive follow-up only after obtaining a fresh reported angle.",
+        "caveat": "This is a general news-tip route, not a verified dedicated travel commissioning email; ask for appropriate routing."
+      },
+      {
+        "name": "Langkawi App",
+        "route": "hello@langkawi.app, published in site FAQ",
+        "source": "https://langkawi.app/",
+        "fit": "An existing relevant listing and island visitor readership; correct factual details first, then suggest a useful independent field note.",
+        "caveat": "Site states independent inclusion cannot be bought; paid sponsorship is separate and labelled."
+      }
+    ],
+    "additional_citation_maintenance": {
+      "name": "Naturally Langkawi / LADA",
+      "source": "https://naturallylangkawi.my/contact-us/",
+      "purpose": "Request correction or inclusion in current visitor resources using an owner-approved fact sheet. This is destination-information maintenance, not a guaranteed earned-news placement."
+    },
+    "owner_confirmations": [
+      "Current legal/trading name and authorized press spokesperson",
+      "Current address and postcode; exact entrance map pin",
+      "Current phone, WhatsApp operation and daily/holiday hours",
+      "Current full menu, preparations, prices, units, taxes/fees and allergen procedures",
+      "Actual founder identity, continuity and reopening chronology if expanding beyond attributed published history",
+      "Capacity, parking, accessibility and booking policies",
+      "Rights for every photograph supplied to press",
+      "Official social handles"
+    ],
+    "distribution_and_link_policy": {
+      "source": "https://developers.google.com/search/docs/essentials/spam-policies#link-spam",
+      "guidance": "Seek genuine, independently chosen editorial coverage and correct relevant listings. Do not buy ranking links, require keyword-rich anchors or exchange meals/products for followed links. Paid or sponsored coverage must be clearly disclosed and links qualified with rel=\"sponsored\" or rel=\"nofollow\". Google specifically identifies manipulative links in distributed press releases/guest posts and low-quality directory links as spam. Use the brand name or natural source attribution if an editor chooses to link. Distribution is for readership and verifiable information, not a promised ranking benefit."
+    }
+  },
+  "measurement_plan": {
+    "baseline": "Before changing content, capture 28-day and 90-day Google Search Console page/query data and Google Business Profile performance through authorized owner access; preserve any seasonal comparisons.",
+    "events": [
+      "Menu visits from organic search",
+      "Click-to-call",
+      "WhatsApp start (not a confirmed reservation)",
+      "Directions clicks",
+      "Owner-confirmed bookings where attribution is available"
+    ],
+    "query_groups": [
+      "Brand",
+      "Menu and prices",
+      "Location and hours",
+      "Reservation/contact",
+      "Non-brand seafood/Pantai Tengah"
+    ],
+    "review": "Evaluate indexed pages and visitor outcomes at 30/60/90 days. Separate branded from non-branded changes; do not claim causation from a single ranking snapshot.",
+    "pr_metrics": [
+      "Relevant independent coverage",
+      "Accuracy of current address/contact mentions",
+      "Referral visits",
+      "Enquiries/bookings when observable"
+    ],
+    "not_metrics": [
+      "Invented domain authority scores",
+      "Raw paid link counts",
+      "Guaranteed first-place ranking"
+    ]
+  },
+  "sources": {
+    "tourism_history": "https://naturallylangkawi.my/wp-content/uploads/pdf/Bits_n_Eats_of_Langkawi.pdf",
+    "national_history": "https://www.thenationalnews.com/travel/2025/01/30/malyasia-langkawi-new-hotels-experiences-things-to-do/",
+    "listing": "https://langkawi.app/business/orkid-ria-seafood-restaurant",
+    "old_history": "https://www.langkawi-insight.com/langkawi_000112.htm",
+    "old_hotel_guide": "https://www.alamandavillaslangkawi.com/where-to-eat-langkawi",
+    "telaga_menu": "https://telagaseafood.my/menu",
+    "telaga_reserve": "https://telagaseafood.my/reserve",
+    "unkaizan_menu": "https://unkaizan.com/en/grill/",
+    "tripadvisor_area": "https://www.tripadvisor.com/Restaurants-g2053325-c33-Pantai_Tengah_Langkawi_Langkawi_District_Kedah.html",
+    "star_contact": "https://www.thestar.com.my/contactus/",
+    "national_contact": "https://www.thenationalnews.com/contact-us/",
+    "langkawi_contact": "https://langkawi.app/",
+    "tourism_contact": "https://naturallylangkawi.my/contact-us/",
+    "google_spam": "https://developers.google.com/search/docs/essentials/spam-policies#link-spam"
+  }
+}

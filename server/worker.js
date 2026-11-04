@@ -146,6 +146,7 @@ async function administration(request,env,transport){
 
 // Only known public documents are normalised. OAuth, API cursors and asset
 // version queries must retain their parameters, and unknown URLs remain 404s.
+// Keep campaign attribution on public pages; their HTML canonical stays query-free.
 const canonicalOrigin='https://orkidriaseafood.com';
 const publicPages=new Map([
  ['/', '/'], ['/index.html', '/'],
@@ -157,9 +158,12 @@ const productionHosts=new Set(['orkidriaseafood.com','www.orkidriaseafood.com','
 function canonicalRedirect(request,env){
  const url=new URL(request.url),path=publicPages.get(url.pathname);
  if(env.SITE_ORIGIN!==canonicalOrigin||!productionHosts.has(url.hostname)||!path||!['GET','HEAD'].includes(request.method))return null;
- const target=canonicalOrigin+path;
- if(url.href===target)return null;
- return new Response(null,{status:301,headers:{Location:target,'Cache-Control':'public, max-age=3600'}});
+ const target=new URL(path,canonicalOrigin);
+ target.search=url.search;
+ // These are local preview/cache-busting flags, not visitor attribution.
+ for(const parameter of ['release','alignment','font','story'])target.searchParams.delete(parameter);
+ if(url.href===target.href)return null;
+ return new Response(null,{status:301,headers:{Location:target.href,'Cache-Control':'public, max-age=3600'}});
 }
 
 export function createWorker(transport=fetch){return {

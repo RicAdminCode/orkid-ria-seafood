@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-04",
+  "fullSuitePassed": 40,
+  "browser": {
+    "summary": {
+      "heroHeight": 787.1953125,
+      "autoRotation": "02 / 08 \u2192 03 / 08",
+      "pause": true,
+      "foodNeon": "1",
+      "linkAnimations": [
+        "neon-underline",
+        "neon-underline",
+        "neon-underline"
+      ],
+      "hoursAnimations": [
+        "hero-neon",
+        "hero-neon"
+      ],
+      "brandFont": "Fraunces, Georgia, serif"
+    },
+    "layouts": [
+      {
+        "width": 1543,
+        "overflow": false,
+        "broken": [],
+        "guestCards": 3
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "broken": [],
+        "guestCards": 3
+      }
+    ],
+    "reducedMotion": true
+  },
+  "finalChecks": {
+    "rotationWhileHovering": true,
+    "before": "02 / 08",
+    "after": "03 / 08",
+    "autoAnnouncementsOff": true,
+    "neonHover": true,
+    "globalPause": true
+  }
+}

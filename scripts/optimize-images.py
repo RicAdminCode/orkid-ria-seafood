@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate responsive WebP photographs; keep source JPEGs and provenance intact.
+"""Generate responsive AVIF/WebP photographs; keep source JPEGs and provenance intact.
 
 Requires Pillow: python3 -m pip install Pillow
 Run from any directory: python3 scripts/optimize-images.py
@@ -19,13 +19,19 @@ def main():
             photo = ImageOps.exif_transpose(original).convert('RGB')
             width = min(photo.width, 1600)
             variants = []
-            for target_width in sorted({width, *[w for w in (480, 800) if w < width]}):
+            for target_width in sorted({width, *[w for w in (480, 800, 1200) if w < width]}):
                 height = round(photo.height * target_width / photo.width)
                 resized = photo.resize((target_width, height), Image.Resampling.LANCZOS)
                 suffix = '' if target_width == width else f'-{target_width}'
                 output = source.with_name(f'{source.stem}{suffix}.webp')
                 metadata = {key: original.info[key] for key in ('icc_profile', 'xmp') if original.info.get(key)}
-                resized.save(output, 'WEBP', quality=82, method=6, **metadata)
+                resized.save(output, 'WEBP', quality=86, method=6, **metadata)
+                variants.append({'path': str(output.relative_to(ROOT)), 'width': target_width,
+                                 'height': height, 'bytes': output.stat().st_size})
+                output = output.with_suffix('.avif')
+                resized.save(output, 'AVIF', quality=60, speed=6, subsampling='4:4:4', **metadata)
+                with Image.open(output) as encoded:
+                    assert encoded.size == (target_width, height), output
                 variants.append({'path': str(output.relative_to(ROOT)), 'width': target_width,
                                  'height': height, 'bytes': output.stat().st_size})
             manifest.append({'source': str(source.relative_to(ROOT)), 'original_bytes': source.stat().st_size,

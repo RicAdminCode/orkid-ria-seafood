@@ -1,0 +1,99 @@
+[
+  {
+    "page": "index.html",
+    "images": 16,
+    "unique_full_src_bytes": 1849976,
+    "largest_images": [
+      [
+        "assets/2026/feb-08.webp",
+        352948
+      ],
+      [
+        "assets/2026/feb-0b.webp",
+        352486
+      ],
+      [
+        "assets/2026/feb-0c.webp",
+        251798
+      ]
+    ],
+    "main_text_words": 69,
+    "note": "Sum of unique full src file sizes, not measured network transfers; srcset and lazy loading affect actual bytes."
+  },
+  {
+    "page": "menu/index.html",
+    "images": 7,
+    "unique_full_src_bytes": 1024980,
+    "largest_images": [
+      [
+        "assets/2026/feb-0c.webp",
+        251798
+      ],
+      [
+        "assets/2026/feb-0a.webp",
+        198182
+      ],
+      [
+        "assets/gallery/32-40-c2-fd.webp",
+        184634
+      ]
+    ],
+    "main_text_words": 180,
+    "note": "Sum of unique full src file sizes, not measured network transfers; srcset and lazy loading affect actual bytes."
+  },
+  {
+    "page": "about/index.html",
+    "images": 5,
+    "unique_full_src_bytes": 958804,
+    "largest_images": [
+      [
+        "assets/2026/feb-08.webp",
+        352948
+      ],
+      [
+        "assets/2026/feb-0b.webp",
+        352486
+      ],
+      [
+        "assets/langkawi-app/orkid-ria5.webp",
+        99122
+      ]
+    ],
+    "main_text_words": 417,
+    "note": "Sum of unique full src file sizes, not measured network transfers; srcset and lazy loading affect actual bytes."
+  },
+  {
+    "page": "restaurant/index.html",
+    "images": 24,
+    "unique_full_src_bytes": 3841242,
+    "largest_images": [
+      [
+        "assets/2026/feb-08.webp",
+        352948
+      ],
+      [
+        "assets/2026/feb-0b.webp",
+        352486
+      ],
+      [
+        "assets/gallery/32-40-c2-ff.webp",
+        271600
+      ]
+    ],
+    "main_text_words": 253,
+    "note": "Sum of unique full src file sizes, not measured network transfers; srcset and lazy loading affect actual bytes."
+  },
+  {
+    "page": "reservation/index.html",
+    "images": 1,
+    "unique_full_src_bytes": 82792,
+    "largest_images": [
+      [
+        "assets/langkawi-app/orkid-ria4.webp",
+        82792
+      ]
+    ],
+    "main_text_words": 104,
+    "note": "Sum of unique full src file sizes, not measured network transfers; srcset and lazy loading affect actual bytes."
+  }
+]
