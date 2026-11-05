@@ -109,7 +109,7 @@ async function administration(request,env,transport){
   }
   if(path==='/admin/reviews/disconnect'){
    const connection=await getConnection(env);
-   await env.DB.batch([env.DB.prepare('DELETE FROM settings'),env.DB.prepare('DELETE FROM oauth_states')]);
+   await env.DB.batch([env.DB.prepare('DELETE FROM settings WHERE key IN (?,?,?)').bind('connection','location','revision'),env.DB.prepare('DELETE FROM oauth_states')]);
    let revoked=true;
    if(connection){try{const result=await transport('https://oauth2.googleapis.com/revoke',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({token:connection.refreshToken}),signal:AbortSignal.timeout(12000)});revoked=result.ok;}catch{revoked=false;}}
    return adminPage(`<p>Local connection and location selection removed. ${revoked?'Google access revoked.':'Google revocation could not be confirmed. Remove this app from your Google Account permissions to finish revocation.'}</p><a href="/admin/reviews">Return to setup</a>`);
@@ -167,6 +167,7 @@ function canonicalRedirect(request,env){
 }
 
 export function createWorker(transport=fetch){return {
+ /** @param {Request} request @param {import('./types').Env} env */
  async fetch(request,env){
   const canonical=canonicalRedirect(request,env);
   if(canonical)return canonical;
@@ -192,6 +193,7 @@ export function createWorker(transport=fetch){return {
    return json({error:['ACCESS_DENIED','AUTH_REQUIRED'].includes(code)?'AUTH_REQUIRED':code},error.status||503);
   }
  },
+ /** @param {ScheduledController} _event @param {import('./types').Env} env */
  async scheduled(_event,env){await env.DB.batch([env.DB.prepare('DELETE FROM rate_limits WHERE expires<?').bind(Date.now()),env.DB.prepare('DELETE FROM oauth_states WHERE expires<?').bind(Date.now())]);}
 };}
 export default createWorker();

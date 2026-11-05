@@ -6,7 +6,7 @@ const slugs=['','menu','about','restaurant','reservation'];
 const descriptions=new Set();
 for(const slug of slugs)test(`SEO document and local assets: /${slug}`,()=>{
  const window=new Window();const document=window.document;
- document.write(readFileSync(`${slug?slug+'/':''}index.html`,'utf8'));
+ document.write(readFileSync(`dist/${slug?slug+'/':''}index.html`,'utf8'));
  const canonical=`https://orkidriaseafood.com/${slug?slug+'/':''}`;
  assert.equal(document.querySelector('link[rel=canonical]').href,canonical);
  assert.equal(document.querySelectorAll('h1').length,1);
@@ -25,7 +25,7 @@ for(const slug of slugs)test(`SEO document and local assets: /${slug}`,()=>{
   const url=new URL(a.getAttribute('href'),canonical);
   if(url.origin!==new URL(canonical).origin)continue;
   const path=decodeURIComponent(url.pathname);
-  assert.ok(existsSync(path.slice(1)+(path.endsWith('/')?'index.html':'')),path);
+  assert.ok(existsSync('dist/'+path.slice(1)+(path.endsWith('/')?'index.html':'')),path);
  }
  if(slug){assert.ok(document.querySelector('[aria-label=Breadcrumb]'));assert.ok(graph.some(x=>x['@type']==='BreadcrumbList'));}
  else assert.ok(document.querySelector('[data-google-reviews]').hidden);

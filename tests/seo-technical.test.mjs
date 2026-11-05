@@ -59,6 +59,7 @@ test('robots points to a sitemap containing exactly five public canonical pages'
 });
 test('Cloudflare routes canonical and www hosts through the normalisation worker',async()=>{
  const config=JSON.parse(await readFile('wrangler.jsonc','utf8'));
+ assert.equal(config.assets.not_found_handling,'404-page');
  assert.deepEqual(config.routes,[
   {pattern:'orkidriaseafood.com/*',zone_name:'orkidriaseafood.com'},
   {pattern:'www.orkidriaseafood.com/*',zone_name:'orkidriaseafood.com'}

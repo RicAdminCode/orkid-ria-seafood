@@ -1,3 +1,23 @@
+export function mountInteractions() {
+let active = true;
+const cleanup = [];
+const listen = (target, type, handler, options) => {
+  if (!target) return;
+  target.addEventListener(type, handler, options);
+  cleanup.push(() => target.removeEventListener(type, handler, options));
+};
+const setInterval = (handler, delay) => {
+  const id = globalThis.setInterval(handler, delay);
+  cleanup.push(() => globalThis.clearInterval(id));
+  return id;
+};
+const timeouts = new Set();
+const setTimeout = (handler, delay) => {
+  const id = globalThis.setTimeout(() => { timeouts.delete(id); if (active) handler(); }, delay);
+  timeouts.add(id);
+  return id;
+};
+const clearTimeout = id => { timeouts.delete(id); globalThis.clearTimeout(id); };
 const q = (selector, context = document) => context.querySelector(selector);
 const qa = (selector, context = document) => [...context.querySelectorAll(selector)];
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -6,7 +26,7 @@ function applyMotionPreference() {
   if (reducedMotion.matches) qa('.reveal').forEach(el => el.classList.add('in'));
 }
 applyMotionPreference();
-reducedMotion.addEventListener('change', applyMotionPreference);
+listen(reducedMotion, 'change', applyMotionPreference);
 
 const header = q('.site-header');
 const menu = q('.mobile-menu');
@@ -17,18 +37,18 @@ function setMenu(open) {
   menu?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   if (menu) menu.textContent = open ? 'Close' : 'Menu';
 }
-menu?.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
-qa('.nav-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', event => {
+listen(menu, 'click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+qa('.nav-link').forEach(link => listen(link, 'click', () => setMenu(false)));
+listen(document, 'keydown', event => {
   if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') {
     setMenu(false);
     menu.focus();
   }
 });
-document.addEventListener('click', event => {
+listen(document, 'click', event => {
   if (header && !header.contains(event.target)) setMenu(false);
 });
-matchMedia('(max-width: 760px)').addEventListener('change', () => setMenu(false));
+listen(matchMedia('(max-width: 760px)'), 'change', () => setMenu(false));
 
 const slides = qa('.slide');
 let current = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
@@ -52,9 +72,9 @@ function show(index, automatic = false) {
     count.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
   }
 }
-q('.next')?.addEventListener('click', () => show(current + 1));
-q('.prev')?.addEventListener('click', () => show(current - 1));
-q('.slider-controls')?.addEventListener('keydown', event => {
+listen(q('.next'), 'click', () => show(current + 1));
+listen(q('.prev'), 'click', () => show(current - 1));
+listen(q('.slider-controls'), 'keydown', event => {
   if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
   event.preventDefault();
   show(current + (event.key === 'ArrowRight' ? 1 : -1));
@@ -63,7 +83,7 @@ show(current);
 
 const hero = q('.hero-main');
 function canRotateHero() {
-  return hero && !document.hidden && !reducedMotion.matches &&
+  return active && hero && !document.hidden && !reducedMotion.matches &&
     !hero.matches(':focus-within') && !q('.slider-controls:hover', hero) && hero.getBoundingClientRect().bottom > 0;
 }
 if (hero && slides.length > 1) setInterval(async () => {
@@ -86,8 +106,9 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
   }), { threshold: .08 });
   document.documentElement.classList.add('motion-ready');
   qa('.reveal').forEach(el => observer.observe(el));
+  cleanup.push(() => observer.disconnect());
   // Keyboard navigation must never land on visually hidden content.
-  document.addEventListener('focusin', event => event.target.closest('.reveal')?.classList.add('in'));
+  listen(document, 'focusin', event => event.target.closest('.reveal')?.classList.add('in'));
 }
 
 // Keep decorative cards still during interaction and when motion is paused.
@@ -110,7 +131,7 @@ qa('.rotating-card').forEach((card, cardIndex) => {
 });
 
 qa('[data-rail-direction]').forEach(button => {
-  button.addEventListener('click', () => {
+  listen(button, 'click', () => {
     const rail = q('.photo-rail', button.closest('section'));
     const item = rail?.firstElementChild;
     if (!item) return;
@@ -136,7 +157,7 @@ if (guestRail && guestRail.children.length > 1) {
 
 if (document.body.classList.contains('structure-match')) {
   const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 80);
-  window.addEventListener('scroll', updateHeader, { passive: true });
+  listen(window, 'scroll', updateHeader, { passive: true });
   updateHeader();
 }
 
@@ -147,6 +168,7 @@ if (seafoodRail) {
   if (originals.length > 1) {
     for (const [card, prepend] of [[originals.at(-1), true], [originals[0], false]]) {
       const clone = card.cloneNode(true);
+      cleanup.push(() => clone.remove());
       clone.inert = true;
       clone.setAttribute('aria-hidden', 'true');
       if (prepend) seafoodRail.prepend(clone);
@@ -182,7 +204,7 @@ if (seafoodRail) {
       else if (selected === cards.length - 1) selectCard(1, false);
       if (status) status.textContent = `${(selected - 1 + originals.length) % originals.length + 1} of ${originals.length} · ${q('h3', cards[selected]).textContent}`;
     }
-    seafoodRail.addEventListener('scroll', () => {
+    listen(seafoodRail, 'scroll', () => {
       const center = seafoodRail.scrollLeft + seafoodRail.clientWidth / 2;
       selected = cards.reduce((nearest, card, index) =>
         Math.abs(card.offsetLeft + card.offsetWidth / 2 - center) <
@@ -191,19 +213,27 @@ if (seafoodRail) {
       clearTimeout(settleTimer);
       settleTimer = setTimeout(settleCards, 150);
     }, { passive: true });
-    qa('[data-feature-direction]', section).forEach(button => button.addEventListener('click', () => {
+    qa('[data-feature-direction]', section).forEach(button => listen(button, 'click', () => {
       // Resolve a loop boundary before starting another user-requested movement.
       if (selected === 0 || selected === cards.length - 1) settleCards();
       selectCard(selected + Number(button.dataset.featureDirection));
     }));
-    seafoodRail.addEventListener('keydown', event => {
+    listen(seafoodRail, 'keydown', event => {
       if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
       event.preventDefault();
       q(`[data-feature-direction="${event.key === 'ArrowRight' ? 1 : -1}"]`, section).click();
     });
-    window.addEventListener('resize', () => selectCard(selected, false));
+    listen(window, 'resize', () => selectCard(selected, false));
     seafoodRail.classList.add('carousel-ready');
     selectCard(1, false);
     settleCards();
   }
+}
+
+return () => {
+  active = false;
+  cleanup.reverse().forEach(dispose => dispose());
+  timeouts.forEach(id => globalThis.clearTimeout(id));
+  document.documentElement.classList.remove('motion-ready');
+};
 }

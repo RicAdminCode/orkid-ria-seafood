@@ -2,9 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { Window } from 'happy-dom';
-const source = await readFile(new URL('../reviews.js', import.meta.url), 'utf8');
-const { mountReviews } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
-const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+import { mountReviews } from '../reviews.js';
+const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 const sample = (id, text = 'Excellent dinner') => ({ id, name: 'Mock reviewer', rating: 1, text, createTime: '2026-01-01T00:00:00Z', photoUrl: null });
 const page = (reviews, nextCursor = null) => ({ averageRating: 3.2, totalReviewCount: 7, reviews, nextCursor, googleUrl: 'https://maps.google.com/?cid=123' });
 const settle = () => new Promise(resolve => setTimeout(resolve, 10));
@@ -40,10 +39,23 @@ test('mocked loading, API failure retry, and empty state', async () => {
   assert.equal(root.getAttribute('aria-busy'), 'true'); release(); await settle();
   assert.match(root.querySelector('[data-review-status]').textContent, /not connected/);
   assert.equal(root.querySelector('[data-review-google]').hidden, true);
+  assert.equal(calls, 1); // Retrying remains an explicit visitor action.
   root.querySelector('[data-review-retry]').click(); await settle();
   assert.match(root.querySelector('[data-review-status]').textContent, /No Google reviews/);
   assert.equal(root.getAttribute('aria-busy'), 'false');
   instance.destroy(); window.happyDOM.abort();
+});
+test('review widgets keep their TanStack query data isolated', async () => {
+  const first = setup(async () => ({ ok:true, json:async () => page([sample('a', 'First widget')]) }));
+  const second = setup(async () => ({ ok:true, json:async () => page([sample('b', 'Second widget')]) }));
+  try {
+    await settle();
+    assert.equal(first.root.querySelector('.review-text').textContent, 'First widget');
+    assert.equal(second.root.querySelector('.review-text').textContent, 'Second widget');
+  } finally {
+    first.instance.destroy(); first.window.happyDOM.abort();
+    second.instance.destroy(); second.window.happyDOM.abort();
+  }
 });
 test('mocked pagination failure preserves reviews and refresh removes deleted records', async () => {
   let calls = 0;

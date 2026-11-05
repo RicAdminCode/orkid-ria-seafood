@@ -1,5 +1,8 @@
+import { QueryClient } from '@tanstack/query-core';
+
 // Reviews stay in memory only; refresh replaces all pages to reflect Google edits/deletions.
 export function mountReviews(root, { fetcher = fetch, refreshMs = 300000 } = {}) {
+  const queries = new QueryClient({ defaultOptions: { queries: { retry: false, staleTime: 0, gcTime: refreshMs, networkMode: 'always' } } });
   const doc = root.ownerDocument;
   const list = root.querySelector('[data-review-list]');
   const status = root.querySelector('[data-review-status]');
@@ -57,12 +60,18 @@ export function mountReviews(root, { fetcher = fetch, refreshMs = 300000 } = {})
     if (pending) return;
     pending = true; retryAppend = append; root.setAttribute('aria-busy', 'true');
     more.disabled = true; retry.hidden = true; status.textContent = append ? 'Loading more Google reviews…' : 'Loading Google reviews…';
-    if (!append) { list.replaceChildren(); summary.textContent = ''; google.hidden = true; more.hidden = true; cursor = null; }
+    if (!append) { queries.clear(); list.replaceChildren(); summary.textContent = ''; google.hidden = true; more.hidden = true; cursor = null; }
     try {
-      const response = await fetcher(`/api/reviews${append && cursor ? `?cursor=${encodeURIComponent(cursor)}` : ''}`, { cache: 'no-store', credentials: 'omit', signal: AbortSignal.timeout(40000) });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'UPSTREAM_UNAVAILABLE');
-      if (!Array.isArray(data.reviews)) throw new Error('UPSTREAM_UNAVAILABLE');
+      const data = await queries.fetchQuery({
+        queryKey: ['google-reviews', append ? cursor : null],
+        queryFn: async () => {
+          const response = await fetcher(`/api/reviews${append && cursor ? `?cursor=${encodeURIComponent(cursor)}` : ''}`, { cache: 'no-store', credentials: 'omit', signal: AbortSignal.timeout(40000) });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || 'UPSTREAM_UNAVAILABLE');
+          if (!Array.isArray(data.reviews)) throw new Error('UPSTREAM_UNAVAILABLE');
+          return data;
+        }
+      });
       const firstNew = list.children.length;
       data.reviews.forEach(review => list.append(renderReview(review)));
       summary.textContent = Number.isFinite(data.totalReviewCount)
@@ -85,9 +94,5 @@ export function mountReviews(root, { fetcher = fetch, refreshMs = 300000 } = {})
   const timer = setInterval(refresh, refreshMs);
   doc.addEventListener('visibilitychange', refresh);
   void load();
-  return { reload: () => load(false), destroy: () => { clearInterval(timer); doc.removeEventListener('visibilitychange', refresh); } };
-}
-if (typeof document !== 'undefined') {
-  const root = document.querySelector('[data-google-reviews]');
-  if (root && !root.hidden) mountReviews(root);
+  return { reload: () => load(false), destroy: () => { queries.clear(); clearInterval(timer); doc.removeEventListener('visibilitychange', refresh); } };
 }

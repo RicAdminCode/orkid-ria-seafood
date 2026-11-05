@@ -90,7 +90,9 @@ test('mocked location verification is required; disconnect clears secrets even w
  const denied=createWorker(async(url,options)=>String(url).includes('/reviews?')?new Response(JSON.stringify({error:'unverified'}),{status:403}):provider()(url,options));
  let r=await denied.fetch(req('/admin/reviews/select',env,{admin:true,method:'POST',body:new URLSearchParams({csrf,location:'accounts/123/locations/789'})}),env);assert.equal(r.status,503);assert.equal(env.DB.raw.prepare("SELECT value FROM settings WHERE key='location'").get().value,'accounts/123/locations/456');
  r=await worker.fetch(req('/admin/reviews/select',env,{admin:true,method:'POST',body:new URLSearchParams({csrf,location:'accounts/123/locations/789'})}),env);assert.equal(r.status,303);
- const failRevoke=createWorker(async()=>{throw Error('offline');});r=await failRevoke.fetch(req('/admin/reviews/disconnect',env,{admin:true,method:'POST',body:new URLSearchParams({csrf})}),env);assert.equal(r.status,200);assert.match(await r.text(),/could not be confirmed/);assert.equal(env.DB.raw.prepare('SELECT count(*) AS n FROM settings').get().n,0);
+ env.DB.raw.prepare('INSERT INTO settings VALUES (?,?)').run('restaurant_timezone','Asia/Kuala_Lumpur');
+ const failRevoke=createWorker(async()=>{throw Error('offline');});r=await failRevoke.fetch(req('/admin/reviews/disconnect',env,{admin:true,method:'POST',body:new URLSearchParams({csrf})}),env);assert.equal(r.status,200);assert.match(await r.text(),/could not be confirmed/);
+ assert.deepEqual(env.DB.raw.prepare('SELECT key,value FROM settings').all().map(row=>({...row})),[{key:'restaurant_timezone',value:'Asia/Kuala_Lumpur'}]);
 });
 test('missing public fields stay missing; profile URL and content cannot become executable markup',()=>{
  const result=publicReview({reviewer:{profilePhotoUrl:'javascript:alert(1)'},comment:'<img onerror="alert(1)">'});assert.equal(result.name,null);assert.equal(result.photoUrl,null);assert.equal(result.rating,null);assert.equal(result.createTime,null);assert.equal(result.text,'<img onerror="alert(1)">');

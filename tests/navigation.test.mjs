@@ -5,7 +5,7 @@ import { Window } from 'happy-dom';
 
 // Mocked DOM interaction checks; these do not measure rendered layout or real browsers.
 const source = await readFile(new URL('../app.js', import.meta.url), 'utf8');
-const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 const storageKey = 'orkid-ria-motion-paused';
 function setup(t, savedPreference) {
   const window = new Window({ url: 'http://localhost:3123' });
@@ -17,9 +17,9 @@ function setup(t, savedPreference) {
   const matchMedia = window.matchMedia.bind(window);
   window.matchMedia = query => query === '(prefers-reduced-motion: reduce)' ? media : matchMedia(query);
   if (savedPreference !== undefined) window.localStorage.setItem(storageKey, savedPreference);
-  window.eval(source);
+  window.eval(source.replace('export function mountInteractions', 'function mountInteractions') + '\nwindow.disposeInteractions = mountInteractions();');
   window.document.dispatchEvent(new window.Event('DOMContentLoaded'));
-  t.after(() => window.happyDOM.close());
+  t.after(() => { window.disposeInteractions(); return window.happyDOM.close(); });
   return { window, document: window.document, intervals, media };
 }
 
@@ -33,6 +33,15 @@ test('mocked mobile navigation Escape closes the menu and restores trigger focus
   assert.equal(menu.getAttribute('aria-expanded'), 'false');
   assert.equal(document.querySelector('.site-header').classList.contains('open'), false);
   assert.equal(document.activeElement, menu);
+});
+
+test('page cleanup removes event handlers and carousel clones before route unmount', t => {
+  const { window, document } = setup(t);
+  const menu = document.querySelector('.mobile-menu');
+  window.disposeInteractions();
+  menu.click();
+  assert.equal(menu.getAttribute('aria-expanded'),'false');
+  assert.equal(document.querySelectorAll('.feature-rail .dish-card[inert]').length,0);
 });
 
 test('mocked mobile navigation closes on outside click or a selected navigation link', t => {
